@@ -1,11 +1,18 @@
-### Hi there 👋
+### Hi there! I'm Leonardo, a systems engineering student and a lover of software development.
+
+- 🔭 Most recent work [Increasing Awareness towards Visually Impaired People with an Inclusive Mobile Application for English Learning](https://github.com/Proyecto-Final-EPICS).
+- 🌱 I’m currently learning **React JS** and **backend development**.
+
+How to reach me:
+- 📫 leovergaramarq@gmail.com
+- 📫 https://www.linkedin.com/in/leovergaramarq/
+- 📫 https://twitter.com/leovergaramarq/
 
 <!--
-**leovergaramarq/leovergaramarq** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
 - 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...- 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
