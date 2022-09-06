@@ -2,7 +2,7 @@
   "name": "leovergaramarq",
   "version": "1.0.0",
   "description": "- 🔭 Most recent work [Increasing Awareness towards Visually Impaired People with an Inclusive Mobile Application for English Learning](https://github.com/Proyecto-Final-EPICS).\r - 🌱 I’m currently learning **React JS** and **backend development**.",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node",
     "dev": "nodemon",
