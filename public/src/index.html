@@ -32,13 +32,13 @@
                 <img src="../assets/icons/lv.svg" alt="LV">
             </a>
             <ul>
-                <li><a href="#home" selected><i></i>Home</a></li>
+                <li><a href="#home" selected><i class="fa-solid fa-house"></i>Home</a></li>
                 <hr>
-                <li><a href="#about-me">About</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
                 <hr>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-briefcase"></i>Projects</a></li>
                 <hr>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-comments"></i>Contact</a></li>
             </ul>
         </nav>
     </aside>
@@ -91,20 +91,37 @@
                 </div>
             </section>
             
-            <section id="about-me" class="about-me">
-                <div class="about-me__info">
-                    <h1>About me</h2>
-    
+            <section id="about" class="about">
+                <!-- <div class="about__content"> -->
+                <div class="about-me">
+                    <h1>About me</h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, nisi asperiores est quisquam, quia 
+                        provident rem cupiditate unde ullam, molestias reprehenderit? Laudantium fugit voluptas voluptatem 
+                        laboriosam provident aspernatur ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum 
+                    </p>
+                    <button class="btn-primary">Download CV</button>
                 </div>
-                <p>
-                    I am a software developer with a background in business and management. I have a passion for learning and I am always looking for new ways to improve myself.
-                </p>
-                <p>
-                    I am currently working as a full-stack developer at <a href="https://www.santander.com.mx/">Santander</a> in Mexico City.
-                </p>
-                <p>
-                    I am also a certified Scrum Master and a certified Scrum Master Certified.
-                </p>
+                <!-- </div> -->
+                <div class="about-edu">
+                    <h3 class="subsection-title hr-left hr-right">Education</h3>
+                    <ul>
+                        <li>
+                            <div class="about-edu__degree">
+                                <div class="about-edu__title">Systems and Computer Engineering</div>
+                                <div class="about-edu__on">Universidad del Norte</div>
+                            </div>
+                            <div class="about-edu__state">
+                                <div class="about-edu__period">Jan 2019 - To date</div>
+                                <!-- <div class="about-edu__progress"></div> -->
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn-primary">Certificates</button>
+                </div>
+                <div class="about__skills">
+                    <h3 class="subsection-title hr-left hr-right">Skills</h3>
+                </div>
             </section>
         </div>
     </main>

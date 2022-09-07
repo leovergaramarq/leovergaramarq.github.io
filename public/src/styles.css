@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     /* font-family: 'Rubik', sans-serif; */
-    font-family: 'Baloo 2', cursive;
+    /* font-family: 'Baloo 2', cursive; */
+    font-family: 'Signika Negative', sans-serif;
 }
 
 :root {
@@ -57,6 +58,17 @@ h3 {
 }
 
 .cursor-pointer {
+    cursor: pointer;
+}
+
+.btn-primary {
+    margin-top: 24px;
+    background-color: var(--blue-primary);
+    color: var(--white);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 1.5rem;
+    font-weight: 300;
     cursor: pointer;
 }
 
@@ -122,6 +134,11 @@ aside {
     font-size: 18px;
 }
 
+.nav-aside ul a i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
 .nav-aside ul a[selected] {
     color: var(--blue-primary);
 }
@@ -147,6 +164,10 @@ main {
 section {
     width: 80vw;
     padding: 20px 80px;
+}
+
+.subsection-title {
+    margin-top: 40px;
 }
 
 /* HOME */
@@ -203,10 +224,39 @@ section {
     transition: all 0.3s ease-in-out;
 } */
 
-.about-me {
-    display: flex;
-    /* flex-direction: column;
-    align-items: center; */
-    padding: 40px 0;
-    /* background-color: var(--white); */
+/* ABOUT */
+
+.about__content {
+    padding: 20px 0;
 }
+
+.about-me h1 {
+    color: var(--blue-primary);
+}
+
+.about-me p {
+    margin-top: 20px;
+}
+
+.about-edu ul li {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-edu__title {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.about-edu__on {
+    color: var(--gray-2);
+}
+
+/* .about-edu__period {
+
+} */
+
+/* .about-edu__progress {
+
+} */
