@@ -9,11 +9,15 @@
     <!-- normalize css -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@300;500&display=swap" rel="stylesheet">
     
     <!-- styles -->
     <link rel="stylesheet" href="styles.css">
@@ -22,47 +26,87 @@
     <title>Leonardo Vergara</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-main">
-            <a class="home" href=".">leovergaramarq</a>
+    <aside>
+        <nav class="nav-aside">
+            <a class="logo" href=".">
+                <img src="../assets/icons/lv.svg" alt="LV">
+            </a>
             <ul>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#home" selected><i></i>Home</a></li>
+                <hr>
+                <li><a href="#about-me">About</a></li>
+                <hr>
                 <li><a href="#projects">Projects</a></li>
+                <hr>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
     <main>
-        <section class="presentation">
-            <div class="presentation__info">
-                <h2 class="italic">Hi!</h2>
-                <!-- <hr> -->
-                <h1 class="italic">I am Leonardo Vergara</h1>
-                <h3 class="italic">A Junior Software Developer</h3>
-            </div>
-            <div class="presentation__img">
-                <img src="../assets/pic_320.png" alt="Leonardo Vergara">
-            </div>
-        </section>
-        
-        <section id="about-me" class="about-me">
-            <div class="about-me__info">
-                <h1>About me</h2>
-
-            </div>
-            <p>
-                I am a software developer with a background in business and management. I have a passion for learning and I am always looking for new ways to improve myself.
-            </p>
-            <p>
-                I am currently working as a full-stack developer at <a href="https://www.santander.com.mx/">Santander</a> in Mexico City.
-            </p>
-            <p>
-                I am also a certified Scrum Master and a certified Scrum Master Certified.
-            </p>
-        </section>
+        <div class="content">
+            <section id="home" class="home">
+                <div class="home__content">
+                    <div class="home__info">
+                        <h2 class="title italic hr-right">Hi!</h2>
+                        <h1 class="title italic">I am Leonardo Vergara</h1>
+                        <h3 class="title italic">A Junior Software Developer</h3>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa esse laudantium molestiae, omnis, quos minus optio corrupti illum architecto iste vel libero distinctio similique tempore reiciendis mollitia eum tenetur.</p>
+                        <div class="home__links">
+                            <ul class="home__social">
+                                <li>
+                                    <a href="https://github.com/leovergaramarq" target="_blank">
+                                        <!-- <img class="icon" src="../assets/icons/github.svg" alt="Github"> -->
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/in/leovergaramarq" target="_blank">
+                                        <!-- <img class="icon" src="../assets/icons/linkedin.svg" alt="Linkedin"> -->
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/leovergaramarq" target="_blank">
+                                        <!-- <img class="icon" src="../assets/icons/twitter.svg" alt="Twitter"> -->
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/leovergaramarq" target="_blank">
+                                        <!-- <img class="icon" src="../assets/icons/instagram.svg" alt="Instagram"> -->
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="home__cv cursor-pointer">
+                                <!-- <img src="../assets/icons/cv.svg" alt="CV"> -->
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="home__img">
+                        <img src="../assets/pic_320.png" alt="Leonardo Vergara">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="about-me" class="about-me">
+                <div class="about-me__info">
+                    <h1>About me</h2>
+    
+                </div>
+                <p>
+                    I am a software developer with a background in business and management. I have a passion for learning and I am always looking for new ways to improve myself.
+                </p>
+                <p>
+                    I am currently working as a full-stack developer at <a href="https://www.santander.com.mx/">Santander</a> in Mexico City.
+                </p>
+                <p>
+                    I am also a certified Scrum Master and a certified Scrum Master Certified.
+                </p>
+            </section>
+        </div>
     </main>
 </body>
 </html>

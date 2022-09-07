@@ -4,13 +4,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Baloo 2', cursive;
 }
 
 :root {
     --blue-primary: #5488F0;
     --white: #FDFDFD;
+    --whitish: #F2F4F6;
     --gray-1: #CCC;
+    --gray-2: rgb(155, 155, 155);
+    --gray-3: rgb(94, 94, 94);
+    --gray-4: rgb(37, 37, 37);
     --black: #030303;
 
     background-color: var(--white);
@@ -41,81 +46,162 @@ h3 {
     transform: skew(-5deg);
 }
 
-/* HEADER */
-
-header {
-    padding: 0 60px;
-    height: 80px;
-    box-shadow: 0px 2px 4px var(--gray-1);
+.title {
+    font-family: 'Baloo 2', cursive;
 }
 
-.nav-main {
+.text {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-horizontal-rule */
+
+.hr-left, .hr-right {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    height: inherit;
+    text-align: center;
+}
+
+.hr-left::before,
+.hr-right::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.hr-left:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.hr-right:not(:empty)::after {
+    margin-left: .25em;
+}
+
+/* SIDE */
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100vh;
     background-color: var(--white);
+    z-index: 10;
 }
 
-.nav-main * {
-    color: var(--blue-primary);
-    font-family: 'Baloo 2', cursive;
-    /* font-style: italic; */
-    font-size: 20px;
+.nav-aside {
+    height: inherit;
+    width: min-content;
+    margin: 0 auto;
 }
 
-.home {
-    font-size: 22px;
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin: 40px 0;
 }
 
-.nav-main ul {
-    color: var(--blue-primary);
+.nav-aside ul {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--blue-primary);
 }
 
-.nav-main ul a:hover {
+.nav-aside ul a {
+    color: var(--gray-4);
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+
+.nav-aside ul a[selected] {
+    color: var(--blue-primary);
+}
+
+/* .nav-aside ul a:hover {
     text-decoration: underline;
-}
+} */
 
-/* MAIN */
+/* MAIN - CONTENT */
+
 main {
-    width: 70%;
-    margin: 60px auto;
+    margin-left: 20%;
+    background-color: var(--whitish);
+    overflow-x: hidden;
+    height: 100vh;
 }
 
-.presentation {
+.content {
+    display: flex;
+    width: fit-content;
+}
+
+section {
+    width: 80vw;
+    padding: 20px 80px;
+}
+
+/* HOME */
+
+.home__content {
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
+    gap: 80px;
+    padding: 100px 0;
 }
 
-.presentation__info {
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
-    padding: 40px 0;
+.home__info p {
+    margin-top: 20px;
+    line-height: 24px;
 }
 
-.presentation__info * {
-    font-family: 'Baloo 2', cursive;
+.home__links {
+    display: flex;
+    justify-content: space-between;
+    /* width: 80%; */
+    margin: 40px 0 0 60px;
 }
 
-.presentation__img {
+.home__links i {
+    font-size: 32px;
+}
+
+.home__social {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.home__img {
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
     width: 300px;
     height: 300px;
     background-image: linear-gradient(to right, var(--white), var(--blue-primary));
     border-radius: 50%;
 }
 
-.presentation__img img {
+.home__img img {
+    position: absolute;
     width: inherit;
     height: inherit;
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* .home__img img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+} */
 
 .about-me {
     display: flex;
@@ -124,4 +210,3 @@ main {
     padding: 40px 0;
     /* background-color: var(--white); */
 }
-
