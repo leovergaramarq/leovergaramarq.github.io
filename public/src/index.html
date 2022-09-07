@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- normalize css -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@300;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@300;500&display=swap"
+        rel="stylesheet">
+
     <!-- styles -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- ... -->
     <title>Leonardo Vergara</title>
 </head>
+
 <body>
     <aside>
         <nav class="nav-aside">
             <a class="logo" href=".">
-                <img src="../assets/icons/lv.svg" alt="LV">
+                <img src="../assets/icons/lv.svg">
             </a>
             <ul>
                 <li><a href="#home" selected><i class="fa-solid fa-house"></i>Home</a></li>
@@ -51,7 +55,9 @@
                         <h2 class="title italic hr-right">Hi!</h2>
                         <h1 class="title italic">I am Leonardo Vergara</h1>
                         <h3 class="title italic">A Junior Software Developer</h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa esse laudantium molestiae, omnis, quos minus optio corrupti illum architecto iste vel libero distinctio similique tempore reiciendis mollitia eum tenetur.</p>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa esse
+                            laudantium molestiae, omnis, quos minus optio corrupti illum architecto iste vel libero
+                            distinctio similique tempore reiciendis mollitia eum tenetur.</p>
                         <div class="home__links">
                             <ul class="home__social">
                                 <li>
@@ -90,40 +96,157 @@
                     </div>
                 </div>
             </section>
-            
+
             <section id="about" class="about">
-                <!-- <div class="about__content"> -->
-                <div class="about-me">
-                    <h1>About me</h1>
-                    <p class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, nisi asperiores est quisquam, quia 
-                        provident rem cupiditate unde ullam, molestias reprehenderit? Laudantium fugit voluptas voluptatem 
-                        laboriosam provident aspernatur ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum 
-                    </p>
-                    <button class="btn-primary">Download CV</button>
-                </div>
-                <!-- </div> -->
-                <div class="about-edu">
-                    <h3 class="subsection-title hr-left hr-right">Education</h3>
-                    <ul>
-                        <li>
-                            <div class="about-edu__degree">
-                                <div class="about-edu__title">Systems and Computer Engineering</div>
-                                <div class="about-edu__on">Universidad del Norte</div>
+                <div class="about__content">
+                    <div class="about-me">
+                        <h1>About me</h1>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, nisi asperiores est
+                            quisquam, quia
+                            provident rem cupiditate unde ullam, molestias reprehenderit? Laudantium fugit voluptas
+                            voluptatem
+                            laboriosam provident aspernatur ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ipsum
+                        </p>
+                        <button class="btn-primary">Download CV</button>
+                    </div>
+
+                    <div class="about-edu">
+                        <h3 class="title-hr hr-left hr-right">Education</h3>
+                        <ul>
+                            <li>
+                                <div class="about-edu__degree">
+                                    <div class="about-edu__title">Systems and Computer Engineering</div>
+                                    <div class="about-edu__on">Universidad del Norte</div>
+                                </div>
+                                <div class="about-edu__state">
+                                    <div class="about-edu__period">Jan 2019 - To date</div>
+                                    <!-- <div class="about-edu__progress"></div> -->
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn-primary">Certificates</button>
+                    </div>
+                    <div class="about-skills">
+                        <h3 class="title-hr hr-left hr-right">Tech Skills</h3>
+                        <div class="about-skills__content">
+                            <div class="about-skills__cat">
+                                <ul>
+                                    <li id="cat-skills-lang" selected>
+                                        <span id="cat-pointer"><i class="fa-solid fa-greater-than"></i></span>
+                                        <!-- <span id="cat-pointer"><i class="fa-solid fa-caret-right"></i></span> -->
+                                        <span>Programming Languages</span>
+                                    </li>
+                                    <li id="cat-skills-web"><span>Web</span></li>
+                                    <li id="cat-skills-mob"><span>Mobile</span></li>
+                                    <li id="cat-skills-db"><span>Database Management</span></li>
+                                    <li id="cat-skills-devops"><span>DevOps</span></li>
+                                    <li id="cat-skills-other"><span>Other</span></li>
+                                </ul>
                             </div>
-                            <div class="about-edu__state">
-                                <div class="about-edu__period">Jan 2019 - To date</div>
-                                <!-- <div class="about-edu__progress"></div> -->
+                            <div class="about-skills__tech">
+                                <ul>
+                                    <li id="skills-lang" class="about-skills__tech__list" showing>
+                                        <ul>
+                                            <li>
+                                                <div class="skill-lvl"><span>Excelent</span></div>
+                                                <img src="../assets/icons/js.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/python.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/java.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Medium</span></div>
+                                                <img src="../assets/icons/c-sharp.svg">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="skills-web" class="about-skills__tech__list">
+                                        <ul>
+                                            <li>
+                                                <div class="skill-lvl"><span>Medium</span></div>
+                                                <img src="../assets/icons/html.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/css.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/sass.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/react.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Medium</span></div>
+                                                <img src="../assets/icons/bootstrap.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/node.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Basic</span></div>
+                                                <img src="../assets/icons/flask.svg">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="skills-mob" class="about-skills__tech__list">
+                                        <ul>
+                                            <li>
+                                                <div class="skill-lvl"><span>Basic</span></div>
+                                                <img src="../assets/icons/flutter.svg">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="skills-db" class="about-skills__tech__list">
+                                        <ul>
+                                            <li>
+                                                <div class="skill-lvl"><span>Medium</span></div>
+                                                <img src="../assets/icons/sql-server.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Basic</span></div>
+                                                <img src="../assets/icons/mysql.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Basic</span></div>
+                                                <img src="../assets/icons/mongodb.svg">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="skills-devops" class="about-skills__tech__list">
+                                        <ul>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/heroku.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Basic</span></div>
+                                                <img src="../assets/icons/docker.svg">
+                                            </li>
+                                            <li>
+                                                <div class="skill-lvl"><span>Good</span></div>
+                                                <img src="../assets/icons/git.svg">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
-                        </li>
-                    </ul>
-                    <button class="btn-primary">Certificates</button>
-                </div>
-                <div class="about__skills">
-                    <h3 class="subsection-title hr-left hr-right">Skills</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
 </body>
+
 </html>
