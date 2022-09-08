@@ -87,7 +87,7 @@ h4 {
 .hr-right::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--black);
 }
 
 .hr-left:not(:empty)::before {
@@ -106,14 +106,14 @@ aside {
     left: 0;
     width: 20%;
     height: 100vh;
-    background-color: var(--white);
     z-index: 10;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--gray-1);
+    background-color: var(--white);
 }
 
 .nav-menu {
     height: inherit;
-    width: min-content;
+    width: fit-content;
     margin: 0 auto;
 }
 
@@ -146,10 +146,6 @@ aside {
 .nav-menu ul li[selected] a {
     color: var(--blue-primary);
 }
-
-/* .nav-menu ul a:hover {
-    text-decoration: underline;
-} */
 
 /* MAIN - CONTENT */
 
@@ -283,19 +279,23 @@ section {
 }
 
 #cat-pointer {
-    /* position: absolute;
-    top: 0; */
+    position: absolute;
+    top: 0;
+    left: 0;
     color: var(--blue-primary);
 }
 
 .about-skills__cat ul li {
-    /* display: flex;
-    flex-direction: row; */
     margin-top: 32px;
     font-size: 1.2rem;
 }
+
+.about-skills__cat ul li[selected] {
+    margin-left: 20px;
+}
+
 .about-skills__cat ul li * {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .about-skills__tech ul {

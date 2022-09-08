@@ -1,5 +1,5 @@
 import siderMenu from './siderMenu.js';
-import slideSections from './slideSections.js';
+import skills from './skills.js';
 
 siderMenu();
-slideSections();
+skills();
