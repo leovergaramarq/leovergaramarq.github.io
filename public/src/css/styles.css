@@ -360,9 +360,9 @@ section {
     padding: 20px 40px;
 }
 
-.portfolio__main {
+/* .portfolio__main {
 
-}
+} */
 
 .slider {
     position: relative;
@@ -379,22 +379,67 @@ section {
 }
 
 .slider__slides ul li {
+    position: relative;
     height: 200px;
     width: 320px;
+    min-width: 320px;
     background-color: var(--black);
-    border: 3px solid var(--gray-3);
+    border: 6px solid var(--gray-1);
     border-radius: 6px;
 }
 
 .slider__slides ul li img {
-    height: 200px;
-    width: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
-
-.slider__slides ul li img:hover {
+.slider__slides ul li a {
+    transition: opacity 0.3s ease-in-out;
+}
+.slider__slides ul li a:hover {
     opacity: 0.5;
+}
+
+/* .slider__slides ul li a:hover {
+    opacity: 0.5;
+} */
+
+.slider__slides ul li .project-info {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; 
+    right: 0; 
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    border-radius: 32px;
+    padding: 6px 24px;
+}
+
+.slider__slides ul li .project-info:hover {
+    opacity: 1 !important;
+}
+
+.slider__slides ul li .project-info span {
+    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+    color: var(--black);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.slider__slides ul li .project-info span i {
+    margin-left: 6px;
+}
+
+.slider__slides ul li:hover .project-info {
+    visibility: visible;
 }
 
 .arrow {
@@ -460,15 +505,15 @@ section {
     margin-top: 24px;
 }
 
-.contact-main ul li {
-    
+.contact-main ul li img:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
 }
 
 .contact__content ul li img {
     width: 64px;
     height: 64px;
 }
-
 
 /* .contact-direct ul {
     display: flex;
@@ -480,4 +525,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contact-direct ul li img:hover {
+    transform: skew(0deg, -5deg);
+    transition: all 0.1s ease-in-out;
 }
