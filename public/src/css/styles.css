@@ -237,8 +237,12 @@ section {
     padding: 20px 40px;
 }
 
-.about button {
-    margin-top: 24px;
+.about a.btn-primary {
+    margin-top: 32px;
+}
+
+.about a.btn-primary i {
+    margin-left: 6px;
 }
 
 .about-me p {
@@ -360,9 +364,9 @@ section {
     padding: 20px 40px;
 }
 
-/* .portfolio__main {
-
-} */
+.portfolio__content h3 {
+    margin-top: 36px;
+}
 
 .slider {
     position: relative;
