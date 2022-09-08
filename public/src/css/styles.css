@@ -69,7 +69,7 @@ h4 {
     background-color: var(--blue-primary);
     color: var(--white);
     border: none;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 1.5rem;
     font-weight: 300;
     cursor: pointer;
@@ -354,3 +354,76 @@ section {
 }
 
 /* PORTFOLIO */
+
+
+.portfolio__content {
+    padding: 20px 40px;
+    /* position: relative; */
+}
+
+.portfolio__main {
+
+}
+
+.slider {
+    position: relative;
+    margin-top: 24px;
+}
+
+.slider__slides {
+    overflow: hidden;
+}
+
+.slider__slides ul {
+    display: flex;
+    gap: 20px;
+}
+
+.slider__slides ul li {
+    border: 4px solid var(--gray-1);
+    border-radius: 6px;
+}
+
+.slider__slides ul li img {
+    height: 200px;
+    width: 320px;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--gray-4);
+}
+
+.arrow-left {
+    left: 0;
+    transform: translateX(-200%);
+}
+
+.arrow-right {
+    right: 0;
+    transform: translateX(200%);
+}
+
+.portfolio button {
+    margin-top: 24px;
+}
+
+.portfolio__more {
+    position: relative;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.portfolio__more button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.portfolio__more button i {
+    margin-left: 6px;
+}
