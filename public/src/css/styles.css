@@ -380,7 +380,10 @@ section {
 }
 
 .slider__slides ul li {
-    border: 4px solid var(--gray-1);
+    height: 200px;
+    width: 320px;
+    background-color: var(--black);
+    border: 3px solid var(--gray-3);
     border-radius: 6px;
 }
 
@@ -388,6 +391,11 @@ section {
     height: 200px;
     width: 320px;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider__slides ul li img:hover {
+    opacity: 0.5;
 }
 
 .arrow {
@@ -408,9 +416,9 @@ section {
     transform: translateX(200%);
 }
 
-.portfolio button {
+/* .portfolio button {
     margin-top: 24px;
-}
+} */
 
 .portfolio__more {
     position: relative;
@@ -418,12 +426,12 @@ section {
     margin-top: 64px;
 }
 
-.portfolio__more button {
+.portfolio__more a {
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
-.portfolio__more button i {
+.portfolio__more a i {
     margin-left: 6px;
 }
