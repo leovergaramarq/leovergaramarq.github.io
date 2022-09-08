@@ -199,6 +199,7 @@ section {
 
 .home__links i {
     font-size: 32px;
+    color: var(--blue-primary);
 }
 
 .home__social {
@@ -355,10 +356,8 @@ section {
 
 /* PORTFOLIO */
 
-
 .portfolio__content {
     padding: 20px 40px;
-    /* position: relative; */
 }
 
 .portfolio__main {
@@ -434,4 +433,51 @@ section {
 
 .portfolio__more a i {
     margin-left: 6px;
+}
+
+/* CONTACT */
+
+.contact__content {
+    padding: 20px 40px;
+}
+
+.contact__content h3 {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.contact-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 24px;
+}
+
+.contact-sections ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.contact-main ul li {
+    
+}
+
+.contact__content ul li img {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* .contact-direct ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+} */
+
+.contact-direct ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -31,11 +31,11 @@ function sliding($slider) {
 }
 
 function previous($slides, id) {
-    move($slides, -1, id);
+    move($slides, -0.5, id);
 }
 
 function next($slides, id) {
-    move($slides, 1, id);
+    move($slides, 0.5, id);
 }
 
 function move($slides, dir, id) {
