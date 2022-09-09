@@ -59,6 +59,7 @@ h4 {
     font-family: 'Signika Negative', sans-serif;
     font-weight: 300;
     font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .cursor-pointer {
@@ -187,7 +188,6 @@ section {
 
 .home__info p {
     margin-top: 20px;
-    line-height: 24px;
 }
 
 .home__links {
