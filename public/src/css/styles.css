@@ -406,16 +406,14 @@ section {
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
+
 .slider__slides ul li a {
     transition: opacity 0.3s ease-in-out;
 }
-.slider__slides ul li a:hover {
+
+.slider__slides ul li a:hover img {
     opacity: 0.5;
 }
-
-/* .slider__slides ul li a:hover {
-    opacity: 0.5;
-} */
 
 .slider__slides ul li .project-info {
     visibility: hidden;
@@ -432,22 +430,23 @@ section {
     padding: 6px 24px;
 }
 
-.slider__slides ul li .project-info:hover {
+/* .slider__slides ul li .project-info:hover > * {
+    color: red !important;
     opacity: 1 !important;
-}
+} */
 
-.slider__slides ul li .project-info span {
-    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+.slider__slides ul li a .project-info span {
+    text-shadow: -1px 0 var(--gray-1), 0 1px var(--gray-1), 1px 0 var(--gray-1), 0 -1px var(--gray-1);
     color: var(--black);
     font-size: 1.2rem;
     text-align: center;
 }
 
-.slider__slides ul li .project-info span i {
+.slider__slides ul li a .project-info span i {
     margin-left: 6px;
 }
 
-.slider__slides ul li:hover .project-info {
+.slider__slides ul li a:hover .project-info {
     visibility: visible;
 }
 
