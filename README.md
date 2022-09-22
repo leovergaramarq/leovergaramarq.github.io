@@ -1,12 +1,17 @@
-### Hi there! I'm Leonardo, a systems engineering student and a lover of software development.
+# Hi there! I am Leonardo
+Systems engineering student and a lover of software development.
 
-- 🔭 Most recent work [Increasing Awareness towards Visually Impaired People with an Inclusive Mobile Application for English Learning](https://github.com/Proyecto-Final-EPICS).
-- 🌱 I’m currently learning **React JS** and **backend development**.
+<hr>
 
-How to reach me:
-- 📫 leovergaramarq@gmail.com
-- 📫 https://www.linkedin.com/in/leovergaramarq/
-- 📫 https://twitter.com/leovergaramarq/
+<a href="https://linkedin.com/in/leovergaramarq"><img src="https://www.svgrepo.com/show/158420/linkedin.svg" height=32></a>
+<a href="https://twitter.com/leovergaramarq"><img src="https://www.svgrepo.com/show/157815/twitter.svg" height=32></a>
+<a href="https://instagram.com/leovergaramarq"><img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" height=32></a>
+<a href="https://leovergaramarq.github.io"><img src="https://www.svgrepo.com/show/105364/website.svg" height=32></a>
+
+## About me
+- 🔭 Most recent work: [Increasing Awareness towards Visually Impaired People with an Inclusive Mobile Application for English Learning](https://github.com/Proyecto-Final-EPICS).
+- 🌱 I’m currently learning React JS and backend development.
+- 📫 How to reach me: leovergaramarq@gmail.com
 
 <!--
 - 🔭 I’m currently working on ...
