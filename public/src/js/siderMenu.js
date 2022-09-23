@@ -1,10 +1,6 @@
-import { hasAncestor } from "./utils.js";
+'use strict';
 
-const $menuSider = document.querySelector('.nav-menu ul');
-const $menuSiderItems = $menuSider.querySelectorAll('li');
-const $firstSection = document.querySelector('section');
-
-const TRANSITION_DURATION = 500;
+import { hasAncestor, getHash } from "./utils.js";
 
 export default function() {
     $firstSection.style.transition = `margin-left ${TRANSITION_DURATION}ms`;
@@ -19,12 +15,6 @@ export default function() {
     });
 
     selectSection(getHash());
-}
-
-function getHash() {
-    const hash = window.location.hash;
-    if(!hash) return 'home';
-    return hash.substring(1);
 }
 
 function selectSection(section) {
@@ -51,3 +41,9 @@ function slideToSection($li) {
         }
     }
 }
+
+const $menuSider = document.querySelector('.nav-menu ul');
+const $menuSiderItems = $menuSider.querySelectorAll('li');
+const $firstSection = document.querySelector('section');
+
+const TRANSITION_DURATION = 500;

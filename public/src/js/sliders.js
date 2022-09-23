@@ -1,6 +1,4 @@
-const $sliders = document.querySelectorAll('.slider');
-const TRANSITION_DURATION = 500;
-const sliders = {};
+'use strict';
 
 export default function() {
     for (let $slider of $sliders) sliding($slider);
@@ -51,3 +49,7 @@ function move($slides, dir, id) {
         sliders[id].moving = false;
     }, TRANSITION_DURATION);
 }
+
+const $sliders = document.querySelectorAll('.slider');
+const TRANSITION_DURATION = 500;
+const sliders = {};

@@ -1,11 +1,4 @@
-const $catList = document.querySelector('.about-skills__cat');
-const $ul = $catList.querySelector('ul');
-const $catsSpan = $ul.querySelectorAll('span');
-const $pointer = $catList.querySelector('#cat-pointer');
-const $techLists = document.querySelectorAll('.about-skills__tech__list');
-
-const TRANSITION_DURATION = 300;
-let moving = false;
+'use strict';
 
 export default function() {
 
@@ -97,3 +90,12 @@ function selectCat($li) {
         }
     }
 }
+
+const $catList = document.querySelector('.about-skills__cat');
+const $ul = $catList.querySelector('ul');
+const $catsSpan = $ul.querySelectorAll('span');
+const $pointer = $catList.querySelector('#cat-pointer');
+const $techLists = document.querySelectorAll('.about-skills__tech__list');
+
+const TRANSITION_DURATION = 300;
+let moving = false;
