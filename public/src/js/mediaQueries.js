@@ -32,7 +32,7 @@ export default function mediaQueries() {
         if(mediumMQ.matches && Math.abs(swipeStartY - swipeEndY) < 20) {
             const hash = getHash();
 
-            if(swipeStartX - swipeEndX > 50) {
+            if(swipeStartX - swipeEndX > 30) {
                 console.log('swipe left');
                 if(!$aside.hasAttribute('hidden-left')) $aside.setAttribute('hidden-left', '');
                 else {
@@ -47,9 +47,9 @@ export default function mediaQueries() {
                             $navMenuOptions.contact.click();
                     }
                 }
-            } else if(swipeStartX - swipeEndX < -50 && e.target !== $aside && !hasAncestor(e.target, $aside)) {
+            } else if(swipeStartX - swipeEndX < -30 && e.target !== $aside && !hasAncestor(e.target, $aside)) {
                 console.log('swipe right (not on aside)');
-                if(swipeStartX < 50) {
+                if(swipeStartX < 30) {
                     console.log('from left edge');
                     if($aside.hasAttribute('hidden-left')) $aside.removeAttribute('hidden-left');
                 } else {

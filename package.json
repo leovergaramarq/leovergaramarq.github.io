@@ -4,7 +4,7 @@
   "description": "- 🔭 Most recent work [Increasing Awareness towards Visually Impaired People with an Inclusive Mobile Application for English Learning](https://github.com/Proyecto-Final-EPICS).\r - 🌱 I’m currently learning **React JS** and **backend development**.",
   "main": "index.js",
   "scripts": {
-    "start": "node",
+    "start": "node index.js",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
