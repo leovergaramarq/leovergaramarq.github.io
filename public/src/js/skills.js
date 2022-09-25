@@ -4,15 +4,12 @@ export default function() {
 
     $pointer.style.transition = `transform ${TRANSITION_DURATION}ms ease-in-out`;
     for(let $li of $ul.children) {
-        $li.style.transition = `margin-left ${TRANSITION_DURATION}ms ease-in-out`;
+        $li.lastElementChild.style.transition = `margin-left ${TRANSITION_DURATION}ms ease-in-out`;
     }
     
     $ul.addEventListener('mouseover', e => {
-        let $target = e.target;
-        
-        if($target.tagName.toLowerCase() === 'span') {
-            $target = $target.parentElement;
-            selectCat($target);
+        if(e.target.tagName.toLowerCase() === 'span') {
+            selectCat(e.target.parentElement);
         }
     });
 
@@ -41,8 +38,6 @@ function getElemIndex($elem) {
 }
 
 function selectCat($li) {
-    if(moving) return;
-
     const $selectedCat = getFirstWithAttribute($ul.children, 'selected');
     const $techListShowing = getFirstWithAttribute($techLists, 'showing');
     
@@ -61,23 +56,9 @@ function selectCat($li) {
         toShow = true;
     }
 
-    const yPointer = $pointer.getBoundingClientRect().y;
-    const y0 = $catsSpan[0].getBoundingClientRect().y;
-
-    const min = y0 - yPointer;
-    const max = $catsSpan[$catsSpan.length - 1].getBoundingClientRect().y;
-    let offset = min;
-    if($catsSpan.length > 1) offset += ($catsSpan[1].getBoundingClientRect().y - y0) * getElemIndex($li);
-
-    if($pointer.style.transform) offset += +$pointer.style.transform.match(/\d+/g)[0];
-
-    // offset = Math.min(max, Math.max(min, offset));
-
-    moving = true;
-    $pointer.style.transform = `translateY(${offset}px)`;
     setTimeout(() => {
-        moving = false;
-    }, TRANSITION_DURATION);
+        $li.insertAdjacentElement('afterbegin', $pointer);
+    }, TRANSITION_DURATION / 2);
 
     if(toStopShowing) $techListShowing.removeAttribute('showing');
     if(toShow) {
@@ -98,4 +79,3 @@ const $pointer = $catList.querySelector('#cat-pointer');
 const $techLists = document.querySelectorAll('.about-skills__tech__list');
 
 const TRANSITION_DURATION = 300;
-let moving = false;

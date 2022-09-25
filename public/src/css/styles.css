@@ -324,15 +324,17 @@ section:not(.home) {
     position: absolute;
     top: 0;
     left: 0;
+    /* margin-right: 12px; */
     color: var(--blue-primary);
 }
 
 .about-skills__cat ul li {
+    position: relative;
     margin-top: 32px;
     font-size: 1.2rem;
 }
 
-.about-skills__cat ul li[selected] {
+.about-skills__cat ul li[selected] span:last-child {
     margin-left: 20px;
 }
 
@@ -654,10 +656,6 @@ section:not(.home) {
 
     .about-skills__tech__list ul {
         column-gap: 6px;
-    }
-
-    .arrow {
-        display: none;
     }
 }
 @media screen and (max-width: 450px) {
