@@ -1,5 +1,5 @@
 # Hi there! I am Leonardo
-Systems engineering student and a lover of software development.
+Systems engineer and software developer.
 
 <hr>
 

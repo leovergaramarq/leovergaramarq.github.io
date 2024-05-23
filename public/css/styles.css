@@ -280,7 +280,7 @@ section:not(.home) {
     margin-top: 12px;
 }
 
-.about-edu__progress {
+/* .about-edu__progress {
     display: flex;
     align-items: center;
     margin-top: 12px;
@@ -302,12 +302,12 @@ section:not(.home) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
+    width: 100%;
     height: 100%;
     background-color: var(--blue-primary);
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
-}
+} */
 
 /* About Skills */
 
@@ -332,6 +332,7 @@ section:not(.home) {
     position: relative;
     margin-top: 32px;
     font-size: 1.2rem;
+    cursor: default;
 }
 
 .about-skills__cat ul li[selected] span:last-child {
@@ -379,6 +380,7 @@ section:not(.home) {
     flex-direction: column;
     justify-content: center;
     font-weight: 300;
+    cursor: default;
 }
 
 /* PORTFOLIO */

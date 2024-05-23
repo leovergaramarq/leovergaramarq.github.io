@@ -77,31 +77,31 @@ export default function mediaQueries() {
 }
 
 function handleSmallMQ(e) {
-    if (e.matches) {
-        console.log('small media query matches');
-    } else {
-        console.log('small media query does not match');
-    }
+    // if (e.matches) {
+    //     console.log('small media query matches');
+    // } else {
+    //     console.log('small media query does not match');
+    // }
 }
 
 function handleMediumMQ(e) {
     if (e.matches) {
-        console.log('medium media query matches');
+        // console.log('medium media query matches');
         if(picIsLast()) $homeHi.insertAdjacentElement('afterend', $homePic);
     } else {
-        console.log('medium media query does not match');
+        // console.log('medium media query does not match');
     }
 }
 
 function handleLargeMQ(e) {
     if (e.matches) {
-        console.log('large media query matches');
+        // console.log('large media query matches');
         if($homeHi.classList.contains('hr-left'))
             $homeHi.classList.remove('hr-left');
         // 
         if(!picIsLast()) $homeContent.insertAdjacentElement('beforeend', $homePic);
     } else {
-        console.log('large media query does not match');
+        // console.log('large media query does not match');
         if(!$homeHi.classList.contains('hr-left'))
             $homeHi.classList.add('hr-left');
         // 
