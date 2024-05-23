@@ -6,19 +6,22 @@
     padding: 0;
     /* font-family: 'Rubik', sans-serif; */
     /* font-family: 'Baloo 2', cursive; */
-    font-family: 'Signika Negative', sans-serif;
+    font-family: "Signika Negative", sans-serif;
 }
 
 :root {
-    --blue-primary: #5488F0;
-    --white: #FDFDFD;
-    --whitish: #F2F4F6;
-    --gray-1: #CCC;
+    --blue-primary: #5488f0;
+    --white: #fdfdfd;
+    --whitish: #f2f4f6;
+    --gray-0: #ddd;
+    --gray-1: #ccc;
     --gray-2: rgb(155, 155, 155);
     --gray-3: rgb(94, 94, 94);
     --gray-4: rgb(37, 37, 37);
     --black: #030303;
+}
 
+body {
     background-color: var(--white);
 }
 
@@ -52,11 +55,11 @@ h4 {
 }
 
 .title {
-    font-family: 'Baloo 2', cursive;
+    font-family: "Baloo 2", cursive;
 }
 
 .text {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: "Signika Negative", sans-serif;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -64,6 +67,10 @@ h4 {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.nodisplay {
+    display: none;
 }
 
 .btn-primary {
@@ -78,7 +85,8 @@ h4 {
 
 /* https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-horizontal-rule */
 
-.hr-left, .hr-right {
+.hr-left,
+.hr-right {
     display: flex;
     align-items: center;
     text-align: center;
@@ -86,17 +94,17 @@ h4 {
 
 .hr-left::before,
 .hr-right::after {
-    content: '';
+    content: "";
     flex: 1;
     border-bottom: 1px solid var(--black);
 }
 
 .hr-left:not(:empty)::before {
-    margin-right: .25em;
+    margin-right: 0.25em;
 }
 
 .hr-right:not(:empty)::after {
-    margin-left: .25em;
+    margin-left: 0.25em;
 }
 
 .section-title {
@@ -142,7 +150,7 @@ aside {
 
 .nav-menu ul a {
     color: var(--gray-4);
-    font-family: 'Baloo 2', cursive;
+    font-family: "Baloo 2", cursive;
     font-size: 18px;
 }
 
@@ -155,7 +163,7 @@ aside {
     color: var(--blue-primary);
 }
 
-/* MAIN - CONTENT */
+/* MAIN _ CONTENT */
 
 main {
     background-color: var(--whitish);
@@ -226,7 +234,11 @@ section:not(.home) {
     width: 300px;
     min-width: 300px;
     height: 300px;
-    background-image: linear-gradient(to right, var(--white), var(--blue-primary));
+    background-image: linear-gradient(
+        to right,
+        var(--white),
+        var(--blue-primary)
+    );
     border-radius: 50%;
     margin: 0;
 }
@@ -313,30 +325,45 @@ section:not(.home) {
 
 .about-skills__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 16px;
+    border: 1px solid var(--gray-1);
 }
 
 .about-skills__cat {
-    position: relative;
+    border-right: 1px solid var(--gray-1);
+    flex-grow: 1;
 }
 
 #cat-pointer {
     position: absolute;
-    top: 0;
-    left: 0;
-    /* margin-right: 12px; */
+    top: 50%;
+    /* left: 8px; */
+    transform: translateY(-50%);
     color: var(--blue-primary);
 }
 
 .about-skills__cat ul li {
-    position: relative;
-    margin-top: 32px;
     font-size: 1.2rem;
     cursor: default;
+    padding: 22px 12px;
+}
+
+.about-skills__cat ul li div {
+    position: relative;
+}
+
+.about-skills__cat ul li[selected] {
+    background-color: var(--gray-0);
 }
 
 .about-skills__cat ul li[selected] span:last-child {
-    margin-left: 20px;
+    margin-left: 28px;
+}
+
+.about-skills__tech {
+    flex-grow: 1;
+    padding: 0 2%;
 }
 
 .about-skills__tech ul {
@@ -345,9 +372,6 @@ section:not(.home) {
 
 .about-skills__tech__list {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 .about-skills__tech__list[showing] {
@@ -360,12 +384,14 @@ section:not(.home) {
     grid-auto-flow: column;
     direction: rtl;
     column-gap: 32px;
+    /* width: 400px; */
 }
 
 .about-skills__tech__list ul li {
     display: flex;
-    direction: ltr;
+    flex-direction: row-reverse;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -411,15 +437,15 @@ section:not(.home) {
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: stretch;
     align-items: stretch;
-    
+
     /* display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap; */
-    
+
     margin-top: 20px;
 }
 
@@ -457,8 +483,8 @@ section:not(.home) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0; 
-    right: 0; 
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -468,7 +494,8 @@ section:not(.home) {
 }
 
 .portfolio__content ul li a .project-info span {
-    text-shadow: -1px 0 var(--gray-1), 0 1px var(--gray-1), 1px 0 var(--gray-1), 0 -1px var(--gray-1);
+    text-shadow: -1px 0 var(--gray-1), 0 1px var(--gray-1), 1px 0 var(--gray-1),
+        0 -1px var(--gray-1);
     color: var(--black);
     font-size: 1.2rem;
     text-align: center;
@@ -576,7 +603,7 @@ section:not(.home) {
     main {
         margin-left: 20vw;
     }
-    
+
     .home__pic {
         flex-grow: 2;
     }
@@ -586,7 +613,7 @@ section:not(.home) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        
+
         /* top: 50%;
         transform: translateY(-50%); */
         /* left: 50%;
@@ -600,7 +627,7 @@ section:not(.home) {
         top: initial;
         left: initial;
         transform: initial;
-        
+
         flex-direction: column;
         text-align: center;
         min-width: 100%;
@@ -634,13 +661,29 @@ section:not(.home) {
 }
 
 @media screen and (max-width: 650px) {
-    
+    section:not(.home) {
+        padding: 40px 10px;
+    }
+
+    .about__content {
+        padding: 20px 10px;
+    }
+
     .about-skills__cat {
         width: min-content;
     }
-    
+
+    .about-skills__cat ul li {
+        text-align: center;
+    }
+
     .about-skills__cat ul li span {
         font-size: 1rem;
+    }
+
+    .about-skills__tech__list ul {
+        grid-template-rows: repeat(6, 1fr);
+        column-gap: 6px;
     }
 
     .about-skills__tech__list ul li img {
@@ -648,21 +691,20 @@ section:not(.home) {
         min-width: 38px;
     }
 
-    .about-skills__tech__list ul li {
-        gap: 2px;
-    }
-
     .about-skills__tech__list ul li span {
         font-size: 1rem;
     }
-
-    .about-skills__tech__list ul {
-        column-gap: 6px;
-    }
 }
+
 @media screen and (max-width: 450px) {
     .about-skills__tech__list ul {
-        grid-template-rows: repeat(8, 1fr);
+        display: block;
         column-gap: 4px;
+        /* width: 128px; */
+    }
+
+    .about-skills__tech__list ul li {
+        flex-direction: column-reverse;
+        gap: 0;
     }
 }

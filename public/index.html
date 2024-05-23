@@ -1,702 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- meta -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <!-- meta -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- normalize css -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
+        <!-- normalize css -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Rubik:wght@300&family=Signika+Negative:wght@300;500&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- styles -->
-    <link rel="stylesheet" href="./css/styles.css" />
+        <!-- styles -->
+        <link rel="stylesheet" href="./css/styles.css" />
 
-    <!-- set favicon -->
-    <link rel="icon" href="./assets/img/favicon.ico" />
+        <!-- set favicon -->
+        <link rel="icon" href="./assets/img/favicon.ico" />
 
-    <!-- ... -->
-    <title>Leonardo Vergara</title>
-  </head>
+        <!-- ... -->
+        <title>Leonardo Vergara</title>
+    </head>
 
-  <body>
-    <aside hidden-left>
-      <nav class="nav-menu">
-        <span class="logo">
-          <a href=".">
-            <img src="./assets/icons/lv.svg" />
-          </a>
-        </span>
-        <ul>
-          <li>
-            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
-          </li>
-          <hr />
-          <li>
-            <a href="#about"><i class="fa-solid fa-user"></i>About</a>
-          </li>
-          <hr />
-          <li>
-            <a href="#portfolio"
-              ><i class="fa-solid fa-briefcase"></i>Portfolio</a
-            >
-          </li>
-          <hr />
-          <li>
-            <a href="#contact"><i class="fa-solid fa-comments"></i>Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main>
-      <div class="content">
-        <section id="home" class="home">
-          <div class="home__content">
-            <div class="home__info">
-              <h2 class="title italic hr-right home__greet">Hi!</h2>
-              <h1 class="title italic home__name">I am Leonardo Vergara</h1>
-              <h3 class="title italic home__job">
-                A Systems Engineer and Software Developer
-              </h3>
-              <p class="text home__desc">
-                I'm a systems engineer and passionate about software
-                development. I count on experience in academic and personal
-                projects and I'm always looking for new challenges.
-              </p>
-              <div class="home__links">
-                <ul class="home__social">
-                  <li>
-                    <a href="https://github.com/leovergaramarq" target="_blank">
-                      <i class="fa-brands fa-github"></i>
+    <body>
+        <aside hidden-left>
+            <nav class="nav-menu">
+                <span class="logo">
+                    <a href=".">
+                        <img src="./assets/icons/lv.svg" />
                     </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/in/leovergaramarq"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/leovergaramarq"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/leovergaramarq"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                  </li>
+                </span>
+                <ul>
+                    <li>
+                        <a href="#home"
+                            ><i class="fa-solid fa-house"></i>Home</a
+                        >
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="#about"
+                            ><i class="fa-solid fa-user"></i>About</a
+                        >
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="#portfolio"
+                            ><i class="fa-solid fa-briefcase"></i>Portfolio</a
+                        >
+                    </li>
+                    <hr />
+                    <li>
+                        <a href="#contact"
+                            ><i class="fa-solid fa-comments"></i>Contact</a
+                        >
+                    </li>
                 </ul>
-                <a
-                  class="home__cv cursor-pointer"
-                  download
-                  href="./assets/CV_Leonardo_Vergara_EN.pdf"
-                >
-                  <i class="fa-solid fa-file-arrow-down"></i>
-                </a>
-              </div>
-            </div>
-            <div class="home__pic">
-              <img src="./assets/img/pic_320.png" alt="Leonardo Vergara" />
-            </div>
-          </div>
-        </section>
+            </nav>
+        </aside>
 
-        <section id="about" class="about">
-          <div class="about__content">
-            <div class="about-me">
-              <h1 class="section-title">About me</h1>
-              <p class="text">
-                Systems engineer and software developer with main focus on web
-                applications. Autodidact, dedicated and always willing to learn
-                new skills and technologies to solve problems. I am fluent in
-                English and have participated in several collaborative and
-                personal projects. Experienced in Java, Javascript and Python
-                languages and technologies such as React, Node.js and SQL.
-              </p>
-              <div class="cv-zone">
-                <a
-                  class="btn-primary"
-                  download
-                  href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
-                >
-                  Download CV
-                </a>
-              </div>
-            </div>
-
-            <div class="about-edu">
-              <h3 class="title-hr hr-left hr-right">Education</h3>
-              <ul>
-                <li>
-                  <div class="about-edu__degree">
-                    <div class="about-edu__title">
-                      Systems and Computer Engineering
+        <main>
+            <div class="content">
+                <section id="home" class="home">
+                    <div class="home__content">
+                        <div class="home__info">
+                            <h2 class="title italic hr-right home__greet">
+                                Hi!
+                            </h2>
+                            <h1 class="title italic home__name">
+                                I am Leonardo Vergara
+                            </h1>
+                            <h3 class="title italic home__job">
+                                A Systems Engineer and Software Developer
+                            </h3>
+                            <p class="text home__desc">
+                                I'm a systems engineer and passionate about
+                                software development. I count on experience in
+                                academic and personal projects and I'm always
+                                looking for new challenges.
+                            </p>
+                            <div class="home__links">
+                                <ul class="home__social">
+                                    <li>
+                                        <a
+                                            href="https://github.com/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://linkedin.com/in/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <i
+                                                class="fa-brands fa-linkedin"
+                                            ></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://instagram.com/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <i
+                                                class="fa-brands fa-instagram"
+                                            ></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a
+                                    class="home__cv cursor-pointer"
+                                    download
+                                    href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
+                                >
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home__pic">
+                            <img
+                                src="./assets/img/pic_320.png"
+                                alt="Leonardo Vergara"
+                            />
+                        </div>
                     </div>
-                    <div class="about-edu__on">Universidad del Norte</div>
-                  </div>
-                  <div class="about-edu__state">
-                    <div class="about-edu__period">Jan 2019 - Nov 2023</div>
-                    <!-- <div class="about-edu__progress">
-                      <span class="about-edu__num-progress">10/10</span>
-                      <span class="about-edu__bar-progress"><span></span></span>
-                    </div>
-                  </div> -->
-                </li>
-              </ul>
-            </div>
-            <div class="about-skills">
-              <h3 class="title-hr hr-left hr-right">Tech Skills</h3>
-              <div class="about-skills__content">
-                <div class="about-skills__cat">
-                  <span id="cat-pointer"
-                    ><i class="fa-solid fa-greater-than"></i
-                  ></span>
-                  <ul>
-                    <li for="skills-lang" selected>
-                      <span>Programming Languages</span>
-                    </li>
-                    <li for="skills-web"><span>Web</span></li>
-                    <li for="skills-db"><span>Database Management</span></li>
-                    <li for="skills-mob"><span>Mobile</span></li>
-                    <li for="skills-devops"><span>DevOps</span></li>
-                    <li for="skills-other"><span>Other</span></li>
-                  </ul>
-                </div>
-                <div class="about-skills__tech">
-                  <ul>
-                    <li
-                      id="skills-lang"
-                      class="about-skills__tech__list"
-                      showing
-                    >
-                      <ul>
-                        <li title="Javascript">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/js.svg" />
-                        </li>
-                        <li title="Typescript">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/ts.svg" />
-                        </li>
-                        <li title="Python">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/python.svg" />
-                        </li>
-                        <li title="Java">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/java.svg" />
-                        </li>
-                        <li title="PL/SQL">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/plsql.svg" />
-                        </li>
-                        <li title="Dart">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/dart.svg" />
-                        </li>
-                        <li title="C#">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/c-sharp.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="skills-web" class="about-skills__tech__list">
-                      <ul>
-                        <li title="ReactJS">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/react.svg" />
-                        </li>
-                        <li title="Angular">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/angular.svg" />
-                        </li>
-                        <li title="HTML">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/html.svg" />
-                        </li>
-                        <li title="CSS">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/css.svg" />
-                        </li>
-                        <li title="Sass">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/sass.svg" />
-                        </li>
-                        <li title="Bootstrap">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/bootstrap.svg" />
-                        </li>
-                        <li title="Tailwind CSS">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/tailwind-css.svg" />
-                        </li>
-                        <li title="Node.js">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/node.svg" />
-                        </li>
-                        <li title="Express.js">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/express-js.svg" />
-                        </li>
-                        <li title="Flask">
-                          <div class="skill-lvl"><span>Basic</span></div>
-                          <img src="./assets/icons/flask.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="skills-mob" class="about-skills__tech__list">
-                      <ul>
-                        <li title="Flutter">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/flutter.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="skills-db" class="about-skills__tech__list">
-                      <ul>
-                        <li title="Oracle Database">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/oracle-database.svg" />
-                        </li>
-                        <li title="MySQL">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/mysql.svg" />
-                        </li>
-                        <li title="PostgreSQL">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/postgresql.svg" />
-                        </li>
-                        <li title="MongoDB">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/mongodb.svg" />
-                        </li>
-                        <li title="SQL Server">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/sql-server.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="skills-devops" class="about-skills__tech__list">
-                      <ul>
-                        <li title="Heroku">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/heroku.svg" />
-                        </li>
-                        <li title="Docker">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/docker.svg" />
-                        </li>
-                        <li title="Git">
-                          <div class="skill-lvl"><span>Good</span></div>
-                          <img src="./assets/icons/git.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="skills-other" class="about-skills__tech__list">
-                      <ul>
-                        <li title="Matlab">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/matlab.svg" />
-                        </li>
-                        <li title=".NET">
-                          <div class="skill-lvl"><span>Basic</span></div>
-                          <img src="./assets/icons/dotnet.svg" />
-                        </li>
-                        <li title="Processing">
-                          <div class="skill-lvl"><span>Basic</span></div>
-                          <img src="./assets/icons/processing.svg" />
-                        </li>
-                        <li title="Figma">
-                          <div class="skill-lvl"><span>Medium</span></div>
-                          <img src="./assets/icons/figma.svg" />
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+                </section>
 
-        <section id="portfolio" class="portfolio">
-          <div class="portfolio__content">
-            <h1 class="section-title">Portfolio</h1>
-            <!-- <div class="portfolio__recent">
-                        <h3 class="title-hr hr-left hr-right">Recent Projects</h3>
-                        <div id="slider-recent" class="slider">
-                            <div class="slider__slides">
+                <section id="about" class="about">
+                    <div class="about__content">
+                        <div class="about-me">
+                            <h1 class="section-title">About me</h1>
+                            <p class="text">
+                                Systems engineer and software developer with
+                                main focus on web applications. Autodidact,
+                                dedicated and always willing to learn new skills
+                                and technologies to solve problems. I am fluent
+                                in English and have participated in several
+                                collaborative and personal projects. Experienced
+                                in Java, Javascript and Python languages and
+                                technologies such as React, Node.js and SQL.
+                            </p>
+                            <div class="cv-zone">
+                                <a
+                                    class="btn-primary"
+                                    download
+                                    href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
+                                >
+                                    Download CV
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="about-edu">
+                            <h3 class="title-hr hr-left hr-right">Education</h3>
+                            <ul>
+                                <li>
+                                    <div class="about-edu__degree">
+                                        <div class="about-edu__title">
+                                            Systems and Computer Engineering
+                                        </div>
+                                        <div class="about-edu__on">
+                                            Universidad del Norte
+                                        </div>
+                                    </div>
+                                    <div class="about-edu__state">
+                                        <div class="about-edu__period">
+                                            Jan 2019 - Nov 2023
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about-skills">
+                            <h3 class="title-hr hr-left hr-right">
+                                Tech Skills
+                            </h3>
+                            <div class="about-skills__content">
+                                <div class="about-skills__cat">
+                                    <span id="cat-pointer" class="nodisplay"
+                                        ><i class="fa-solid fa-greater-than"></i
+                                    ></span>
+                                </div>
+                                <div class="about-skills__tech"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="portfolio" class="portfolio">
+                    <div class="portfolio__content">
+                        <h1 class="section-title">Portfolio</h1>
+                        <ul>
+                            <!-- Eyeland -->
+                            <li>
+                                <a
+                                    href="eyeland-project.github.io/webpage/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/my-planbook.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Eyeland
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- My Planbook -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/my_planbook"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/my-planbook.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Eyeland
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- My Planbook -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/my_planbook"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/my-planbook.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Eyeland
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- My Planbook -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/my_planbook"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/my-planbook.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Eyeland
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- EPICS IEEE Web for Schools -->
+                            <li>
+                                <a
+                                    href="https://github.com/Proyecto-Final-EPICS/plataforma_web"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/epics-web.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            EPICS IEEE Web for Schools
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- EPICS IEEE API -->
+                            <li>
+                                <a
+                                    href="https://github.com/Proyecto-Final-EPICS/API"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/epics-api.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            EPICS IEEE API
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- C19-Trace -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/C19-Trace"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/c19-trace.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            C19-Trace
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- Women of Science -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/WomenOfScience"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/women-of-science.jpg"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Women of Science
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- Bungee Jumping Simulator -->
+                            <li>
+                                <a
+                                    href="https://github.com/leovergaramarq/BungeeJumpingSimulator"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="./assets/img/portfolio/bungee.png"
+                                    />
+                                    <span class="project-info">
+                                        <span class="project-info__title">
+                                            Bungee Jumping Simulator
+                                        </span>
+                                        <span class="project-info__see">
+                                            Repository<i
+                                                class="fa-solid fa-arrow-up-right-from-square"
+                                            ></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="portfolio__more">
+                            <a
+                                href="https://github.com/leovergaramarq?tab=repositories"
+                                target="_blank"
+                                class="btn-primary"
+                            >
+                                More<i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="contact">
+                    <div class="contact__content">
+                        <h1 class="section-title">Contact</h1>
+                        <div class="contact-sections">
+                            <div class="contact-main">
+                                <h3>Find Me On</h3>
                                 <ul>
                                     <li>
-                                        <a href="https://github.com/leovergaramarq/my_planbook" target="_blank">
-                                            <img src="./assets/img/portfolio/my-planbook.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    My Planbook
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
+                                        <a
+                                            href="https://linkedin.com/in/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="./assets/icons/linkedin.svg"
+                                            />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/leovergaramarq/Unetz" target="_blank">
-                                            <img src="./assets/img/portfolio/unetz.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    Unetz
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
-                                            
+                                        <a
+                                            href="https://github.com/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="./assets/icons/github.svg"
+                                            />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/leovergaramarq/MessageIt" target="_blank">
-                                            <img src="./assets/img/portfolio/messageit.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    MessageIt
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
+                                        <a
+                                            href="https://www.researchgate.net/profile/Leonardo-Vergara-Marquez"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="./assets/icons/researchgate.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://instagram.com/leovergaramarq"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="./assets/icons/instagram.svg"
+                                            />
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <span class="arrow arrow-left cursor-pointer">
-                                <i class="fas fa-less-than"></i>
-                            </span>
-                            <span class="arrow arrow-right cursor-pointer">
-                                <i class="fas fa-greater-than"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="portfolio__main">
-                        <h3 class="title-hr hr-left hr-right">Main Projects</h3>
-                        <div id="slider-main" class="slider">
-                            <div class="slider__slides">
+                            <div class="contact-direct">
+                                <h3>Or Contact Me Directly</h3>
                                 <ul>
                                     <li>
-                                        <a href="https://github.com/leovergaramarq/EPICS-IEEE-web-for-schools" target="_blank">
-                                            <img src="./assets/img/portfolio/epics-web.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    EPICS IEEE Web for Schools
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
+                                        <a
+                                            href="mailto:leovergaramarq@gmail.com"
+                                        >
+                                            <img
+                                                src="./assets/icons/email.svg"
+                                            />
                                         </a>
+                                        <span>leovergaramarq@gmail.com</span>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/leovergaramarq/EPICS-IEEE-API" target="_blank">
-                                            <img src="./assets/img/portfolio/epics-api.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    EPICS IEEE API
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/leovergaramarq/C19-Trace" target="_blank">
-                                            <img src="./assets/img/portfolio/c19-trace.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    C19-Trace
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/leovergaramarq/WomenOfScience" target="_blank">
-                                            <img src="./assets/img/portfolio/women-of-science.jpg">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    Women of Science
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/leovergaramarq/BungeeJumpingSimulator" target="_blank">
-                                            <img src="./assets/img/portfolio/bungee.png">
-                                            <span class="project-info">
-                                                <span class="project-info__title">
-                                                    Bungee Jumping Simulator
-                                                </span>
-                                                <span class="project-info__see">
-                                                    Ver repositorio<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </span>
-                                            </span>
-                                        </a>
+                                        <span
+                                            ><img
+                                                src="./assets/icons/phone.svg"
+                                        /></span>
+                                        <span>+57 3012898047</span>
                                     </li>
                                 </ul>
                             </div>
-                            <span class="arrow arrow-left cursor-pointer">
-                                <i class="fas fa-less-than"></i>
-                            </span>
-                            <span class="arrow arrow-right cursor-pointer">
-                                <i class="fas fa-greater-than"></i>
-                            </span>
                         </div>
-                    </div> -->
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/my_planbook"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/my-planbook.png" />
-                  <span class="project-info">
-                    <span class="project-info__title"> My Planbook </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/Unetz"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/unetz.png" />
-                  <span class="project-info">
-                    <span class="project-info__title"> Unetz </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/MessageIt"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/messageit.png" />
-                  <span class="project-info">
-                    <span class="project-info__title"> MessageIt </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/EPICS-IEEE-web-for-schools"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/epics-web.png" />
-                  <span class="project-info">
-                    <span class="project-info__title">
-                      EPICS IEEE Web for Schools
-                    </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/EPICS-IEEE-API"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/epics-api.png" />
-                  <span class="project-info">
-                    <span class="project-info__title"> EPICS IEEE API </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/C19-Trace"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/c19-trace.png" />
-                  <span class="project-info">
-                    <span class="project-info__title"> C19-Trace </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/WomenOfScience"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/women-of-science.jpg" />
-                  <span class="project-info">
-                    <span class="project-info__title"> Women of Science </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/leovergaramarq/BungeeJumpingSimulator"
-                  target="_blank"
-                >
-                  <img src="./assets/img/portfolio/bungee.png" />
-                  <span class="project-info">
-                    <span class="project-info__title">
-                      Bungee Jumping Simulator
-                    </span>
-                    <span class="project-info__see">
-                      Ver repositorio<i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                      ></i>
-                    </span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <div class="portfolio__more">
-              <a
-                href="https://github.com/leovergaramarq?tab=repositories"
-                target="_blank"
-                class="btn-primary"
-              >
-                More<i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+                    </div>
+                </section>
             </div>
-          </div>
-        </section>
+        </main>
 
-        <section id="contact" class="contact">
-          <div class="contact__content">
-            <h1 class="section-title">Contact</h1>
-            <div class="contact-sections">
-              <div class="contact-main">
-                <h3>Find Me On</h3>
-                <ul>
-                  <li>
-                    <a
-                      href="https://linkedin.com/in/leovergaramarq"
-                      target="_blank"
-                    >
-                      <img src="./assets/icons/linkedin.svg" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/leovergaramarq" target="_blank">
-                      <img src="./assets/icons/github.svg" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.researchgate.net/profile/Leonardo-Vergara-Marquez"
-                      target="_blank"
-                    >
-                      <img src="./assets/icons/researchgate.svg" />
-                    </a>
-                  </li>
-                  <!-- <li>
-                    <a
-                      href="https://twitter.com/leovergaramarq"
-                      target="_blank"
-                    >
-                      <img src="./assets/icons/twitter.svg" />
-                    </a>
-                  </li> -->
-                  <li>
-                    <a
-                      href="https://instagram.com/leovergaramarq"
-                      target="_blank"
-                    >
-                      <img src="./assets/icons/instagram.svg" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="contact-direct">
-                <h3>Or Contact Me Directly</h3>
-                <ul>
-                  <li>
-                    <a href="mailto:leovergaramarq@gmail.com">
-                      <img src="./assets/icons/email.svg" />
-                    </a>
-                    <span>leovergaramarq@gmail.com</span>
-                  </li>
-                  <li>
-                    <span><img src="./assets/icons/phone.svg" /></span>
-                    <span>+57 3012898047</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <script type="module" src="./js/index.js"></script>
-  </body>
+        <script type="module" src="./js/index.js"></script>
+    </body>
 </html>

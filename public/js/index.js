@@ -1,9 +1,9 @@
-import siderMenu from './siderMenu.js';
-import skills from './skills.js';
-import sliders from './sliders.js';
-import mediaQueries from './mediaQueries.js';
+import sideMenu from "./sideMenu.js";
+import skills from "./skills.js";
+import sliders from "./sliders.js";
+import mediaQueries from "./mediaQueries.js";
 
-siderMenu();
+sideMenu();
 skills();
 sliders();
 mediaQueries();

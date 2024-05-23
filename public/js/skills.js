@@ -1,81 +1,154 @@
-'use strict';
+"use strict";
 
-export default function() {
+import { categories, skills } from "./contents/skills.contents.js";
 
-    $pointer.style.transition = `transform ${TRANSITION_DURATION}ms ease-in-out`;
-    for(let $li of $ul.children) {
-        $li.lastElementChild.style.transition = `margin-left ${TRANSITION_DURATION}ms ease-in-out`;
+export default function () {
+    const TRANSITION_DURATION = 300;
+    let pointerTimeout;
+
+    const $cat = document.querySelector(".about-skills__cat");
+    const $tech = document.querySelector(".about-skills__tech");
+    const $pointer = $cat.querySelector("#cat-pointer");
+
+    displayCategories();
+    displaySkills();
+
+    const $catList = $cat.querySelector("ul");
+    const $techLists = $tech.querySelectorAll(".about-skills__tech__list");
+
+    // $pointer.style.transition = `transform ${TRANSITION_DURATION}ms ease-in-out`;
+    for (let $li of $catList.children) {
+        $li.querySelector(
+            "div"
+        ).lastElementChild.style.transition = `margin-left ${TRANSITION_DURATION}ms ease-in-out`;
     }
-    
-    $ul.addEventListener('mouseover', e => {
-        if(e.target.tagName.toLowerCase() === 'span') {
+
+    $catList.addEventListener("mouseover", (e) => {
+        const tag = e.target.tagName.toLowerCase();
+
+        if (tag === "div") {
             selectCat(e.target.parentElement);
+        } else if (tag === "li") {
+            selectCat(e.target);
         }
     });
 
-    let $selectedCat = getFirstWithAttribute($ul.children, 'selected');
-    if(!$selectedCat) {
-        $selectedCat = $ul.firstElementChild;
-        $selectedCat.setAttribute('selected', '');
+    let $selectedCat = getFirstWithAttribute($catList.children, "selected");
+    if (!$selectedCat) {
+        $selectedCat = $catList.firstElementChild;
+        $selectedCat.setAttribute("selected", "");
     }
     selectCat($selectedCat);
-}
 
-function getFirstWithAttribute($elem, attr) {
-    for(let $child of $elem) {
-        if($child.hasAttribute(attr)) return $child;
+    function getFirstWithAttribute($elem, attr) {
+        for (let $child of $elem) {
+            if ($child.hasAttribute(attr)) return $child;
+        }
+        return null;
     }
-    return null;
-}
 
-function getElemIndex($elem) {
-    const $parent = $elem.parentElement;
-    const $children = $parent.children;
+    function selectCat($li) {
+        const $prevSelectedCat = getFirstWithAttribute(
+            $catList.children,
+            "selected"
+        );
+        const $techListShowing = getFirstWithAttribute($techLists, "showing");
 
-    for(let i = 0; i < $children.length; i++) {
-        if($children[i] === $elem) return i;
-    }
-}
+        let toShow = false;
 
-function selectCat($li) {
-    const $selectedCat = getFirstWithAttribute($ul.children, 'selected');
-    const $techListShowing = getFirstWithAttribute($techLists, 'showing');
-    
-    let toShow = false, toStopShowing = false;
+        if ($prevSelectedCat) {
+            if ($li !== $prevSelectedCat) {
+                $prevSelectedCat.removeAttribute("selected");
+                $techListShowing?.removeAttribute("showing");
 
-    if($selectedCat) {
-        if($li !== $selectedCat) {
-            $selectedCat.removeAttribute('selected');
-            toStopShowing = true;
+                $li.setAttribute("selected", "");
+                toShow = true;
 
-            $li.setAttribute('selected', '');
+                const $prevSelectedCatDiv =
+                    $prevSelectedCat.querySelector("div");
+
+                if ($prevSelectedCatDiv.firstChild === $pointer) {
+                    $prevSelectedCatDiv.removeChild($pointer);
+                }
+            }
+
+            if (pointerTimeout) {
+                clearTimeout(pointerTimeout);
+                pointerTimeout = null;
+            }
+
+            pointerTimeout = setTimeout(() => {
+                if ($pointer.classList.contains("nodisplay")) {
+                    $pointer.classList.remove("nodisplay");
+                }
+
+                $li.querySelector("div").insertAdjacentElement(
+                    "afterbegin",
+                    $pointer
+                );
+            }, TRANSITION_DURATION / 2);
+        } else {
+            $li.setAttribute("selected", "");
             toShow = true;
         }
-    } else {
-        $li.setAttribute('selected', '');
-        toShow = true;
-    }
 
-    setTimeout(() => {
-        $li.insertAdjacentElement('afterbegin', $pointer);
-    }, TRANSITION_DURATION / 2);
-
-    if(toStopShowing) $techListShowing.removeAttribute('showing');
-    if(toShow) {
-        const id = $li.getAttribute('for');
-        for(let $techList of $techLists) {
-            if($techList.id === id) {
-                $techList.setAttribute('showing', '');
-                break;
+        if (toShow) {
+            const id = $li.getAttribute("for");
+            for (let $techList of $techLists) {
+                if ($techList.id === id) {
+                    $techList.setAttribute("showing", "");
+                    break;
+                }
             }
         }
     }
+
+    function displayCategories() {
+        const html = categories
+            .map(({ htmlFor, title }, i) => {
+                return `
+					<li for="${htmlFor}" ${i === 0 ? "selected" : ""}>
+						<div><span>${title}</span></div>
+					</li>
+				`;
+            })
+            .join("\n");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $cat.insertAdjacentElement("beforeend", $ul);
+    }
+
+    function displaySkills() {
+        const html = categories
+            .map(({ htmlFor }, i) => {
+                return `
+				<li
+					id="${htmlFor}"
+					class="about-skills__tech__list"
+					${i === 0 ? "showing" : ""}
+				>
+					<ul>
+						${skills[htmlFor]
+                            .map(({ title, level, icon }) => {
+                                return `
+								<li title="${title}">
+									<div class="skill-lvl"><span>${level}</span></div>
+									<img src="${icon}" alt="${title}" />
+								</li>
+							`;
+                            })
+                            .join("")}
+					</ul>
+				</li>
+			`;
+            })
+            .join("\n");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $tech.insertAdjacentElement("beforeend", $ul);
+    }
 }
-
-const $catList = document.querySelector('.about-skills__cat');
-const $ul = $catList.querySelector('ul');
-const $catsSpan = $ul.querySelectorAll('span');
-const $pointer = $catList.querySelector('#cat-pointer');
-const $techLists = document.querySelectorAll('.about-skills__tech__list');
-
-const TRANSITION_DURATION = 300;

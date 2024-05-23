@@ -5,5 +5,5 @@ const http = Server(app);
 
 // start the http server
 http.listen(app.get("port"), () => {
-  console.log(`Listening on port ${app.get("port")}`);
+    console.log(`Listening on port ${app.get("port")}`);
 });
