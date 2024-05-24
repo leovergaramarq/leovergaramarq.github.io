@@ -11,6 +11,7 @@ export default function () {
             const tagName = $target.tagName.toLowerCase();
             if (tagName === "i") $target = $target.parentElement;
             else if (tagName === "li") $target = $target.firstElementChild;
+            if ($target.tagName.toLowerCase() !== "a") return;
 
             e.preventDefault();
             selectSection($target.href.split("#")[1]);

@@ -30,7 +30,7 @@ export default function mediaQueries() {
         if (mediumMQ.matches && Math.abs(swipeStartY - swipeEndY) < 20) {
             const hash = getHash();
 
-            if (swipeStartX - swipeEndX > 30) {
+            if (swipeStartX - swipeEndX > 40) {
                 if (!$aside.hasAttribute("hidden-left"))
                     $aside.setAttribute("hidden-left", "");
                 else {

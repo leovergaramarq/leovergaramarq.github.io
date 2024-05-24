@@ -222,12 +222,9 @@ section:not(.home) {
 
 .home__content {
     width: 90%;
-    /* height: fit-content;
-    max-height: 60%; */
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    /* padding: 100px 0; */
 }
 
 .home__info p {
@@ -492,7 +489,7 @@ section:not(.home) {
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(max(40%, 300px), 1fr));
     justify-items: stretch;
     align-items: stretch;
     margin-top: 20px;
@@ -850,6 +847,16 @@ section:not(.home) {
         padding: 40px 10px;
     }
 
+    .home__content {
+        padding: 20px 20px;
+    }
+
+    .home__pic {
+        width: 250px;
+        min-width: 250px;
+        height: 250px;
+    }
+
     .about__content {
         padding: 20px 10px;
     }
@@ -884,16 +891,45 @@ section:not(.home) {
         padding: 20px 10px;
     }
 
+    .portfolio__content .portfolio-research {
+        padding: 0 24px;
+    }
+
     .contact__content {
         padding: 20px 10px;
     }
 }
 
 @media screen and (max-width: 450px) {
+    .text {
+        font-size: 1rem;
+    }
+
+    .home__content {
+        padding: 20px 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home .home__name {
+        font-size: 1.8rem;
+    }
+
+    .home .home__job {
+        font-size: 1.2rem;
+    }
+
+    .home__pic {
+        width: 56vw;
+        min-width: 56vw;
+        height: 56vw;
+    }
+
     .about-skills__tech__list ul {
         display: block;
         column-gap: 4px;
-        /* width: 128px; */
     }
 
     .about-skills__tech__list ul li {
