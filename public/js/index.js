@@ -1,9 +1,13 @@
 import sideMenu from "./sideMenu.js";
-import skills from "./skills.js";
 import sliders from "./sliders.js";
 import mediaQueries from "./mediaQueries.js";
+import skills from "./skills.js";
+import portfolio from "./portfolio.js";
 
-sideMenu();
-skills();
-sliders();
-mediaQueries();
+window.addEventListener("DOMContentLoaded", () => {
+    sideMenu();
+    sliders();
+    mediaQueries();
+    skills();
+    portfolio();
+});

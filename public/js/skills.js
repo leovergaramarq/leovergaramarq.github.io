@@ -105,13 +105,13 @@ export default function () {
 
     function displayCategories() {
         const html = categories
-            .map(({ htmlFor, title }, i) => {
-                return `
+            .map(
+                ({ htmlFor, title }, i) => `
 					<li for="${htmlFor}" ${i === 0 ? "selected" : ""}>
 						<div><span>${title}</span></div>
 					</li>
-				`;
-            })
+				`
+            )
             .join("\n");
 
         const $ul = document.createElement("ul");
@@ -122,28 +122,28 @@ export default function () {
 
     function displaySkills() {
         const html = categories
-            .map(({ htmlFor }, i) => {
-                return `
-				<li
-					id="${htmlFor}"
-					class="about-skills__tech__list"
-					${i === 0 ? "showing" : ""}
-				>
-					<ul>
-						${skills[htmlFor]
-                            .map(({ title, level, icon }) => {
-                                return `
-								<li title="${title}">
-									<div class="skill-lvl"><span>${level}</span></div>
-									<img src="${icon}" alt="${title}" />
-								</li>
-							`;
-                            })
-                            .join("")}
-					</ul>
-				</li>
-			`;
-            })
+            .map(
+                ({ htmlFor }, i) => `
+                    <li
+                        id="${htmlFor}"
+                        class="about-skills__tech__list"
+                        ${i === 0 ? "showing" : ""}
+                    >
+                        <ul>
+                            ${skills[htmlFor]
+                                .map(({ title, level, icon }) => {
+                                    return `
+                                    <li title="${title}">
+                                        <div class="skill-lvl"><span>${level}</span></div>
+                                        <img src="${icon}" alt="${title}" />
+                                    </li>
+                                `;
+                                })
+                                .join("")}
+                        </ul>
+                    </li>
+                `
+            )
             .join("\n");
 
         const $ul = document.createElement("ul");
