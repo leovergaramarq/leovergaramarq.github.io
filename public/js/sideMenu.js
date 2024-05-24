@@ -8,8 +8,10 @@ export default function () {
     document.addEventListener("click", (e) => {
         let $target = e.target;
         if (hasAncestor($target, $menuSide)) {
-            if ($target.tagName.toLowerCase() === "i")
-                $target = $target.parentElement;
+            const tagName = $target.tagName.toLowerCase();
+            if (tagName === "i") $target = $target.parentElement;
+            else if (tagName === "li") $target = $target.firstElementChild;
+
             e.preventDefault();
             selectSection($target.href.split("#")[1]);
         }

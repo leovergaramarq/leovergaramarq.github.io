@@ -112,6 +112,24 @@ h4 {
     margin-left: 0.25em;
 }
 
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--gray-4);
+}
+
+.slider-arrow-left {
+    left: 0;
+    transform: translateX(-200%);
+}
+
+.slider-arrow-right {
+    right: 0;
+    transform: translateX(200%);
+}
+
 .section-title {
     color: var(--blue-primary);
 }
@@ -359,7 +377,7 @@ section:not(.home) {
 }
 
 .about-skills__cat ul li[selected] {
-    background-color: var(--whitish-2);
+    background-color: var(--whitish-3);
 }
 
 .about-skills__cat ul li[selected] span:last-child {
@@ -442,7 +460,7 @@ section:not(.home) {
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: stretch;
     align-items: stretch;
 
@@ -456,12 +474,7 @@ section:not(.home) {
 
 .portfolio__content .portfolio-projects ul li {
     height: 300px;
-    /* width: 280px; */
-    /* min-width: 280px; */
-    /* justify-self: stretch;
-    align-self: stretch; */
-    /* background-color: var(--black); */
-    border-radius: 6px;
+    border-radius: 1rem;
 }
 
 .portfolio__content .portfolio-projects ul li a {
@@ -471,6 +484,7 @@ section:not(.home) {
     height: 100%;
     border-radius: inherit;
     transition: all 0.3s ease-in-out;
+    border-radius: inherit;
 }
 
 .portfolio__content .portfolio-projects ul li a:hover {
@@ -486,6 +500,7 @@ section:not(.home) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: inherit;
 
     filter: blur(1px);
     /* filter: blur(2px) grayscale(100%) brightness(0.5) contrast(1.5) sepia(0.5) saturate(0.5) hue-rotate(180deg) invert(0) opacity(0.5); */
@@ -497,7 +512,6 @@ section:not(.home) {
 }
 
 .portfolio__content .portfolio-projects ul li a .project-content {
-    /* visibility: hidden; */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -506,24 +520,12 @@ section:not(.home) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* margin: 0 auto; */
     width: 100%;
     padding: 8px 8px 16px 8px;
     transition: visibility 3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.5) 0px -120px 36px -28px inset;
+    border-radius: inherit;
 }
-
-/* .portfolio__content .portfolio-projects ul li a:hover .project-content {
-    visibility: visible;
-} */
-
-/* .portfolio__content .portfolio-projects ul li a .project-content div {
-    text-shadow: -1px 0 var(--gray-1), 0 1px var(--gray-1), 1px 0 var(--gray-1),
-        0 -1px var(--gray-1);
-    color: var(--black);
-    font-size: 1.2rem;
-    text-align: center;
-} */
 
 .portfolio__content
     .portfolio-projects
@@ -613,12 +615,43 @@ section:not(.home) {
     .project-content__info
     .project-content__description {
     font-size: 0.9rem;
-    /* text-shadow: 1px 1px 1px var(--white); */
     color: var(--white);
 }
 
-.portfolio__content .portfolio-research {
+.portfolio__content .portfolio-projects__more a i {
+    margin-left: 6px;
 }
+
+.portfolio__content .portfolio-projects__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.portfolio__content .portfolio-projects__pagination .arrow {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.portfolio__content .portfolio-projects__pagination .arrow.disabled {
+    background-color: var(--gray-1);
+    color: var(--black);
+    cursor: default;
+}
+
+.portfolio__content .portfolio-projects__pagination .portfolio-projects__page {
+    background-color: var(--gray-1);
+    color: var(--black);
+    padding: 8px 16px;
+    border-radius: 1rem;
+}
+
+/* .portfolio__content .portfolio-research {
+} */
 
 .portfolio__content .portfolio-research ul {
     margin-top: 24px;
@@ -671,36 +704,9 @@ section:not(.home) {
     font-style: italic;
 }
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: var(--gray-4);
-}
-
-.arrow-left {
-    left: 0;
-    transform: translateX(-200%);
-}
-
-.arrow-right {
-    right: 0;
-    transform: translateX(200%);
-}
-
-/* .portfolio button {
-    margin-top: 24px;
-} */
-
-.portfolio__more {
+.portfolio-projects__more {
     display: flex;
     justify-content: end;
-    margin-top: 12px;
-}
-
-.portfolio__more a i {
-    margin-left: 6px;
 }
 
 /* CONTACT */

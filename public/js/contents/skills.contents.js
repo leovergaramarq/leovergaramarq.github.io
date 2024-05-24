@@ -1,3 +1,5 @@
+"use strict";
+
 const SKILLS_LANG = "skills-lang";
 const SKILLS_WEB = "skills-web";
 const SKILLS_DB = "skills-db";

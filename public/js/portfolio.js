@@ -1,16 +1,44 @@
-import { projects, research } from "./contents/portfolio.contents.js";
+"use strict";
+
+import {
+    projects as projectsAll,
+    research as researchAll
+} from "./contents/portfolio.contents.js";
+import { hasAncestor } from "./utils.js";
 
 export default function () {
+    const projects = projectsAll.filter(({ hide }) => !hide);
+    const research = researchAll.filter(({ hide }) => !hide);
+
+    const projectsPerPage = 4;
+    const numPages = Math.ceil(projects.length / projectsPerPage);
+    let currentPage = 0;
+
     displayProjects();
     displayResearch();
 
-    function displayProjects() {
-        // TODO: add pagination
-        // TODO: use tags
-        const $h3 = document.querySelector("#portfolio .portfolio-projects h3");
+    setupArrows();
 
-        const html = projects
-            .filter(({ hide }) => !hide)
+    function displayProjects() {
+        // TODO: use tags
+
+        const $portfolioProjects = document.querySelector(
+            "#portfolio .portfolio-projects"
+        );
+        let $ul = $portfolioProjects.querySelector("ul");
+
+        if ($ul) {
+            $portfolioProjects.removeChild($ul);
+            $ul = null;
+        }
+
+        const $h3 = $portfolioProjects.querySelector("h3");
+
+        const html = projectsAll
+            .slice(
+                currentPage * projectsPerPage,
+                currentPage * projectsPerPage + projectsPerPage
+            )
             .map(
                 ({
                     authorship,
@@ -66,7 +94,7 @@ export default function () {
             )
             .join("\n");
 
-        const $ul = document.createElement("ul");
+        $ul = document.createElement("ul");
         $ul.innerHTML = html;
 
         $h3.insertAdjacentElement("afterend", $ul);
@@ -89,7 +117,6 @@ export default function () {
         const $h3 = document.querySelector("#portfolio .portfolio-research h3");
 
         const html = research
-            .filter(({ hide }) => !hide)
             .map(
                 ({ authors, date, lang, title, url }, i) => `
                     <li>
@@ -134,5 +161,50 @@ export default function () {
         $ul.innerHTML = html;
 
         $h3.insertAdjacentElement("afterend", $ul);
+    }
+
+    function setupArrows() {
+        const $projectsPagination = document.querySelector(
+            "#portfolio .portfolio-projects .portfolio-projects__pagination"
+        );
+        const $arrows = $projectsPagination.querySelectorAll(".arrow");
+        const $page = $projectsPagination.querySelector(
+            ".portfolio-projects__page"
+        );
+
+        if (currentPage === 0) {
+            $arrows[0].classList.add("disabled");
+        }
+        if (currentPage === numPages - 1) {
+            $arrows[1].classList.add("disabled");
+        }
+
+        $page.textContent = `${currentPage + 1} / ${numPages}`;
+
+        $projectsPagination.addEventListener("click", (e) => {
+            if (hasAncestor(e.target, $arrows[0], $projectsPagination)) {
+                currentPage = Math.max(currentPage - 1, 0);
+                $page.textContent = `${currentPage + 1} / ${numPages}`;
+
+                displayProjects();
+
+                if (currentPage === 0) {
+                    $arrows[0].classList.add("disabled");
+                } else if ($arrows[1].classList.contains("disabled")) {
+                    $arrows[1].classList.remove("disabled");
+                }
+            } else if (hasAncestor(e.target, $arrows[1], $projectsPagination)) {
+                currentPage = Math.min(currentPage + 1, numPages - 1);
+                $page.textContent = `${currentPage + 1} / ${numPages}`;
+
+                displayProjects();
+
+                if (currentPage === numPages - 1) {
+                    $arrows[1].classList.add("disabled");
+                } else if ($arrows[0].classList.contains("disabled")) {
+                    $arrows[0].classList.remove("disabled");
+                }
+            }
+        });
     }
 }

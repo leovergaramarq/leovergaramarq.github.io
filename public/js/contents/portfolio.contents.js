@@ -1,3 +1,5 @@
+"use strict";
+
 // TODO: include projects: MATLAB projects, etc.
 
 export const projects = [
