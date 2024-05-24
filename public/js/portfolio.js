@@ -2,16 +2,11 @@ import { projects, research } from "./contents/portfolio.contents.js";
 
 export default function () {
     displayProjects();
-    // displayResearch();
-
-    // const $projectsUl = document.querySelector(
-    //     "#portfolio .portfolio-projects ul"
-    // );
-    // const $researchUl = document.querySelector(
-    //     "#portfolio .portfolio-research ul"
-    // );
+    displayResearch();
 
     function displayProjects() {
+        // TODO: add pagination
+        // TODO: use tags
         const $h3 = document.querySelector("#portfolio .portfolio-projects h3");
 
         const html = projects
@@ -88,5 +83,56 @@ export default function () {
                 window.open(url, target);
             });
         });
+    }
+
+    function displayResearch() {
+        const $h3 = document.querySelector("#portfolio .portfolio-research h3");
+
+        const html = research
+            .filter(({ hide }) => !hide)
+            .map(
+                ({ authors, date, lang, title, url }, i) => `
+                    <li>
+                        <div class="research-content">
+                            <div class="research-content__numeral">[${
+                                i + 1
+                            }]</div>
+                            <div class="research-content__info">
+                                <span class="research-content__authors">
+                                    ${
+                                        authors.length > 1
+                                            ? authors.slice(0, -1).join(", ") +
+                                              " & " +
+                                              authors.slice(-1)
+                                            : authors.join(", ")
+                                    }
+                                </span>
+                                <span class="research-content__date">
+                                    (${date}).
+                                </span>
+                                <span class="research-content__title">
+                                    ${title}.
+                                </span>
+                                <span class="research-content__url">
+                                    Available at:
+                                    <a
+                                        href="${url}"
+                                        target="_blank"
+                                    >
+                                        ${url}
+                                    </a>
+                                    in ${lang}.
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                `
+            )
+            .join("\n");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $h3.insertAdjacentElement("afterend", $ul);
     }
 }

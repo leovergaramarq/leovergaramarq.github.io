@@ -617,6 +617,60 @@ section:not(.home) {
     color: var(--white);
 }
 
+.portfolio__content .portfolio-research {
+}
+
+.portfolio__content .portfolio-research ul {
+    margin-top: 24px;
+}
+
+.portfolio__content .portfolio-research ul li {
+    margin-top: 12px;
+}
+
+.portfolio__content .portfolio-research ul li .research-content {
+    position: relative;
+    font-size: 1.1rem;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 300;
+}
+
+.portfolio__content
+    .portfolio-research
+    ul
+    li
+    .research-content
+    .research-content__numeral {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    margin-left: -4px;
+}
+
+.portfolio__content
+    .portfolio-research
+    ul
+    li
+    .research-content
+    .research-content__info
+    .research-content__url
+    a {
+    text-decoration: underline var(--blue-primary);
+    color: var(--blue-primary);
+    word-break: break-all;
+}
+
+.portfolio__content
+    .portfolio-research
+    ul
+    li
+    .research-content
+    .research-content__info
+    .research-content__title {
+    font-style: italic;
+}
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -640,15 +694,9 @@ section:not(.home) {
 } */
 
 .portfolio__more {
-    position: relative;
-    width: 100%;
-    margin-top: 64px;
-}
-
-.portfolio__more a {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: flex;
+    justify-content: end;
+    margin-top: 12px;
 }
 
 .portfolio__more a i {

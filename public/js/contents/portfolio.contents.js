@@ -284,43 +284,35 @@ export const projects = [
 
 export const research = [
     {
-        title: "Methods and approaches implemented by video games for optimal collision detection.",
+        title: "Methods and approaches implemented by video games for optimal collision detection",
         url: "https://www.researchgate.net/publication/345969391_Metodos_y_aproximaciones_implementadas_por_los_videojuegos_para_una_optima_deteccion_de_colisiones",
-        authors: [
-            "Leonardo David Vergara Márquez",
-            "Camilo Andres Cespedes Jimenez",
-            "Isaac Alejandro Blanco"
-        ],
+        authors: ["Blanco, I.A.", "Vergara, L.D.", "Céspedes, C.A."],
         date: "Nov 2020",
-        lang: "es",
+        lang: "Spanish",
         hide: false
     },
     {
         title: "Maximum Independent Set from Divide and Conquer and Voracious Algorithms",
         url: "https://www.researchgate.net/publication/380818614_Maximum_Independent_Set_desde_Divide_y_Venceras_y_Algoritmos_Voraces",
-        authors: ["Leonardo David Vergara Márquez"],
+        authors: ["Vergara, L.D."],
         date: "May 2021",
-        lang: "es",
+        lang: "Spanish",
         hide: false
     },
     {
         title: "Implementation of Machine Learning Model for Recovery Time Estimation of Covid-19",
         url: "https://www.researchgate.net/publication/380818622_Implementacion_de_Modelo_de_Machine_Learning_para_Estimacion_de_Tiempo_de_Recuperacion_de_Covid-19",
-        authors: ["Leonardo David Vergara Márquez"],
+        authors: ["Vergara, L.D."],
         date: "May 2022",
-        lang: "es",
+        lang: "Spanish",
         hide: false
     },
     {
         title: "Accessible software for the visually impaired to support English as a second language learning",
         url: "https://www.researchgate.net/publication/376229910_Software_accesible_para_personas_con_discapacidad_visual_que_apoya_el_aprendizaje_del_ingles_como_segunda_lengua",
-        authors: [
-            "Camilo José",
-            "Leonardo David Vergara Márquez",
-            "Leonardo Lizcano"
-        ],
+        authors: ["Sinning C.J.", "Vergara, L.D.", "Lizcano, L.D."],
         date: "May 2023",
-        lang: "es",
+        lang: "Spanish",
         hide: false
     }
 ];
