@@ -96,16 +96,9 @@
                                 <ul class="home__social">
                                     <li>
                                         <a
-                                            href="https://github.com/leovergaramarq"
-                                            target="_blank"
-                                        >
-                                            <i class="fa-brands fa-github"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
                                             href="https://linkedin.com/in/leovergaramarq"
                                             target="_blank"
+                                            title="LinkedIn"
                                         >
                                             <i
                                                 class="fa-brands fa-linkedin"
@@ -114,8 +107,18 @@
                                     </li>
                                     <li>
                                         <a
+                                            href="https://github.com/leovergaramarq"
+                                            target="_blank"
+                                            title="GitHub"
+                                        >
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
                                             href="https://instagram.com/leovergaramarq"
                                             target="_blank"
+                                            title="Instagram"
                                         >
                                             <i
                                                 class="fa-brands fa-instagram"
@@ -127,6 +130,7 @@
                                     class="home__cv cursor-pointer"
                                     download
                                     href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
+                                    title="Download CV"
                                 >
                                     <i class="fa-solid fa-file-arrow-down"></i>
                                 </a>
@@ -156,13 +160,20 @@
                                 technologies such as React, Node.js and SQL.
                             </p>
                             <div class="cv-zone">
-                                <a
-                                    class="btn-primary"
-                                    download
-                                    href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
-                                >
-                                    Download CV
-                                </a>
+                                <div class="cv-download-group">
+                                    <button>
+                                        <a
+                                            class="btn-primary"
+                                            download
+                                            href="./assets/pdf/CV_Leonardo_Vergara_EN.pdf"
+                                            >Download CV
+                                        </a>
+                                    </button>
+                                    <select>
+                                        <option value="EN" selected>en</option>
+                                        <option value="ES">es</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
@@ -243,6 +254,7 @@
                                         <a
                                             href="https://linkedin.com/in/leovergaramarq"
                                             target="_blank"
+                                            title="LinkedIn"
                                         >
                                             <img
                                                 src="./assets/icons/linkedin.svg"
@@ -253,6 +265,7 @@
                                         <a
                                             href="https://github.com/leovergaramarq"
                                             target="_blank"
+                                            title="GitHub"
                                         >
                                             <img
                                                 src="./assets/icons/github.svg"
@@ -263,6 +276,7 @@
                                         <a
                                             href="https://www.researchgate.net/profile/Leonardo-Vergara-Marquez"
                                             target="_blank"
+                                            title="ResearchGate"
                                         >
                                             <img
                                                 src="./assets/icons/researchgate.svg"
@@ -273,6 +287,7 @@
                                         <a
                                             href="https://instagram.com/leovergaramarq"
                                             target="_blank"
+                                            title="Instagram"
                                         >
                                             <img
                                                 src="./assets/icons/instagram.svg"

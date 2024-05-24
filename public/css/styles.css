@@ -291,6 +291,38 @@ section:not(.home) {
     margin-top: 32px;
 }
 
+.about__content .cv-zone .cv-download-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.about__content .cv-zone .cv-download-group button {
+    background-color: var(--blue-primary);
+    border: none;
+    border-radius: 1.5rem 0 0 1.5rem;
+    cursor: pointer;
+}
+
+.about__content .cv-zone .cv-download-group button a {
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: inherit;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.about__content .cv-zone .cv-download-group select {
+    background-color: var(--blue-primary);
+    color: var(--white);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 1.5rem 1.5rem 0;
+    font-weight: 300;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .about__content a.btn-primary i {
     margin-left: 6px;
 }
@@ -463,12 +495,6 @@ section:not(.home) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: stretch;
     align-items: stretch;
-
-    /* display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; */
-
     margin-top: 20px;
 }
 
@@ -501,9 +527,7 @@ section:not(.home) {
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-
     filter: blur(1px);
-    /* filter: blur(2px) grayscale(100%) brightness(0.5) contrast(1.5) sepia(0.5) saturate(0.5) hue-rotate(180deg) invert(0) opacity(0.5); */
     transition: all 0.3s ease-in-out;
 }
 
@@ -521,9 +545,9 @@ section:not(.home) {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    padding: 8px 8px 16px 8px;
+    padding: 12px 12px 24px 12px;
     transition: visibility 3s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px -120px 36px -28px inset;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px -130px 36px -28px inset;
     border-radius: inherit;
 }
 
@@ -549,8 +573,7 @@ section:not(.home) {
     span {
     opacity: 0;
     color: var(--blue-primary);
-    font-size: 1.2rem;
-    /* text-shadow: 1px 1px 1px var(--white); */
+    font-size: 1.4rem;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
         1px 1px 0 #fff;
     transition: all 0.3s ease-in-out;
@@ -587,7 +610,7 @@ section:not(.home) {
     .project-content
     .project-content__info
     .project-content__title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--blue-primary);
     text-shadow: 1px 1px 1px var(--white);
@@ -601,7 +624,7 @@ section:not(.home) {
     .project-content
     .project-content__info
     .project-content__authorship {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-shadow: 1px 1px 1px var(--gray-4);
     color: var(--whitish-3);
 }
@@ -614,7 +637,7 @@ section:not(.home) {
     .project-content
     .project-content__info
     .project-content__description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--white);
 }
 
@@ -654,11 +677,11 @@ section:not(.home) {
 } */
 
 .portfolio__content .portfolio-research ul {
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 .portfolio__content .portfolio-research ul li {
-    margin-top: 12px;
+    margin-top: 24px;
 }
 
 .portfolio__content .portfolio-research ul li .research-content {
@@ -730,6 +753,7 @@ section:not(.home) {
 .contact-sections ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 24px;
 }
@@ -794,7 +818,6 @@ section:not(.home) {
         text-align: center;
         min-width: 100%;
         padding: 20px 40px;
-        /* margin: 0 auto; */
     }
 
     .home__pic {
@@ -856,6 +879,14 @@ section:not(.home) {
     .about-skills__tech__list ul li span {
         font-size: 1rem;
     }
+
+    .portfolio__content {
+        padding: 20px 10px;
+    }
+
+    .contact__content {
+        padding: 20px 10px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -868,5 +899,9 @@ section:not(.home) {
     .about-skills__tech__list ul li {
         flex-direction: column-reverse;
         gap: 0;
+    }
+
+    .contact__content {
+        padding: 20px 10px;
     }
 }

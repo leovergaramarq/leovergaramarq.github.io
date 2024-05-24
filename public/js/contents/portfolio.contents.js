@@ -69,7 +69,7 @@ export const projects = [
         authorship: "Co-author"
     },
     {
-        title: "PagingSimulator",
+        title: "Paging Simulator",
         description:
             "Simulator of memory paging based on instructions, secondary memory and different paging methods.",
         img: "./assets/img/portfolio/paging-simulator.png",

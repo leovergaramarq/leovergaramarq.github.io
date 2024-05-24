@@ -17,13 +17,11 @@ export default function mediaQueries() {
     handleSmallMQ(smallMQ);
 
     document.body.addEventListener("touchstart", (e) => {
-        // console.log(e.touches[0].clientX, e.touches[0].clientY);
         swipeStartX = e.touches[0].clientX;
         swipeStartY = e.touches[0].clientY;
     });
 
     document.body.addEventListener("touchmove", (e) => {
-        // console.log(e.touches[0].clientX, e.touches[0].clientY);
         swipeEndX = e.touches[0].clientX;
         swipeEndY = e.touches[0].clientY;
     });
@@ -33,7 +31,6 @@ export default function mediaQueries() {
             const hash = getHash();
 
             if (swipeStartX - swipeEndX > 30) {
-                console.log("swipe left");
                 if (!$aside.hasAttribute("hidden-left"))
                     $aside.setAttribute("hidden-left", "");
                 else {
@@ -53,9 +50,7 @@ export default function mediaQueries() {
                 e.target !== $aside &&
                 !hasAncestor(e.target, $aside)
             ) {
-                console.log("swipe right (not on aside)");
                 if (swipeStartX < 30) {
-                    console.log("from left edge");
                     if ($aside.hasAttribute("hidden-left"))
                         $aside.removeAttribute("hidden-left");
                 } else {
@@ -86,37 +81,25 @@ export default function mediaQueries() {
     });
 }
 
-function handleSmallMQ(e) {
-    // if (e.matches) {
-    //     console.log('small media query matches');
-    // } else {
-    //     console.log('small media query does not match');
-    // }
-}
+function handleSmallMQ(_) {}
 
 function handleMediumMQ(e) {
     if (e.matches) {
-        // console.log('medium media query matches');
         if (picIsLast()) $homeHi.insertAdjacentElement("afterend", $homePic);
     } else {
-        // console.log('medium media query does not match');
     }
 }
 
 function handleLargeMQ(e) {
     if (e.matches) {
-        // console.log('large media query matches');
         if ($homeHi.classList.contains("hr-left"))
             $homeHi.classList.remove("hr-left");
         //
         if (!picIsLast())
             $homeContent.insertAdjacentElement("beforeend", $homePic);
     } else {
-        // console.log('large media query does not match');
         if (!$homeHi.classList.contains("hr-left"))
             $homeHi.classList.add("hr-left");
-        //
-        // if(picIsLast()) $homeHi.insertAdjacentElement('afterend', $homePic);
     }
 }
 

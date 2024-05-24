@@ -10,6 +10,8 @@ export default function () {
     const $tech = document.querySelector(".about-skills__tech");
     const $pointer = $cat.querySelector("#cat-pointer");
 
+    configCvDownload();
+
     displayCategories();
     displaySkills();
 
@@ -150,5 +152,18 @@ export default function () {
         $ul.innerHTML = html;
 
         $tech.insertAdjacentElement("beforeend", $ul);
+    }
+
+    function configCvDownload() {
+        const $cvDownloadGroup = document.querySelector(
+            ".cv-zone .cv-download-group"
+        );
+        const $cvDownload = $cvDownloadGroup.querySelector("button a");
+        const $select = $cvDownloadGroup.querySelector("select");
+
+        $select.addEventListener("change", (e) => {
+            const value = e.target.value;
+            $cvDownload.href = `./assets/pdf/CV_Leonardo_Vergara_${value}.pdf`;
+        });
     }
 }
