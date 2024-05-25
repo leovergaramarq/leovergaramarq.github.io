@@ -2,7 +2,23 @@
 
 import { hasAncestor, getHash } from "./utils.js";
 
-export default function mediaQueries() {
+export default function () {
+    const $main = document.querySelector("main");
+    const $aside = document.querySelector("aside");
+    const $footer = document.querySelector("footer");
+    const $homeHi = document.querySelector(".home__greet");
+    const $homePic = document.querySelector(".home__pic");
+    const $homeContent = document.querySelector(".home__content");
+    const $navMenuOptions = {
+        home: $aside.querySelector('ul li a[href="#home"]'),
+        about: $aside.querySelector('ul li a[href="#about"]'),
+        portfolio: $aside.querySelector('ul li a[href="#portfolio"]'),
+        contact: $aside.querySelector('ul li a[href="#contact"]')
+    };
+
+    let swipeStartX, swipeStartY;
+    let swipeEndX, swipeEndY;
+
     const largeMQ = window.matchMedia("(min-width: 901px)");
     largeMQ.addEventListener("change", handleLargeMQ);
     handleLargeMQ(largeMQ);
@@ -69,7 +85,7 @@ export default function mediaQueries() {
         }
     });
 
-    document.addEventListener("click", (e) => {
+    document.body.addEventListener("click", (e) => {
         if (
             mediumMQ.matches &&
             !$aside.hasAttribute("hidden-left") &&
@@ -79,44 +95,49 @@ export default function mediaQueries() {
             $aside.setAttribute("hidden-left", "");
         }
     });
-}
 
-function handleSmallMQ(_) {}
+    function handleSmallMQ(_) {}
 
-function handleMediumMQ(e) {
-    if (e.matches) {
-        if (picIsLast()) $homeHi.insertAdjacentElement("afterend", $homePic);
-    } else {
+    function handleMediumMQ(e) {
+        if (e.matches) {
+            if (picIsLast()) {
+                $homeHi.insertAdjacentElement("afterend", $homePic);
+            }
+            if (!$aside.hasAttribute("hidden-left")) {
+                $aside.setAttribute("hidden-left", "");
+            }
+            if ($footer.hasAttribute("hidden-bottom")) {
+                $footer.removeAttribute("hidden-bottom");
+            }
+            $main.style.height = "calc(100vh - var(--footer-height))";
+        }
+    }
+
+    function handleLargeMQ(e) {
+        if (e.matches) {
+            if ($aside.hasAttribute("hidden-left")) {
+                $aside.removeAttribute("hidden-left");
+            }
+            if (!$footer.hasAttribute("hidden-bottom")) {
+                $footer.setAttribute("hidden-bottom", "");
+            }
+
+            if ($homeHi.classList.contains("hr-left")) {
+                $homeHi.classList.remove("hr-left");
+            }
+
+            if (!picIsLast()) {
+                $homeContent.insertAdjacentElement("beforeend", $homePic);
+            }
+
+            $main.style.height = "100vh";
+        } else {
+            if (!$homeHi.classList.contains("hr-left"))
+                $homeHi.classList.add("hr-left");
+        }
+    }
+
+    function picIsLast() {
+        return $homePic.nextElementSibling === null;
     }
 }
-
-function handleLargeMQ(e) {
-    if (e.matches) {
-        if ($homeHi.classList.contains("hr-left"))
-            $homeHi.classList.remove("hr-left");
-        //
-        if (!picIsLast())
-            $homeContent.insertAdjacentElement("beforeend", $homePic);
-    } else {
-        if (!$homeHi.classList.contains("hr-left"))
-            $homeHi.classList.add("hr-left");
-    }
-}
-
-function picIsLast() {
-    return $homePic.nextElementSibling === null;
-}
-
-const $aside = document.querySelector("aside");
-const $homeHi = document.querySelector(".home__greet");
-const $homePic = document.querySelector(".home__pic");
-const $homeContent = document.querySelector(".home__content");
-const $navMenuOptions = {
-    home: $aside.querySelector('ul li a[href="#home"]'),
-    about: $aside.querySelector('ul li a[href="#about"]'),
-    portfolio: $aside.querySelector('ul li a[href="#portfolio"]'),
-    contact: $aside.querySelector('ul li a[href="#contact"]')
-};
-
-let swipeStartX, swipeStartY;
-let swipeEndX, swipeEndY;

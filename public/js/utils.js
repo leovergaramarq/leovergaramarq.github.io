@@ -17,3 +17,7 @@ export function getHash() {
     if (!hash) return "home";
     return hash.substring(1);
 }
+
+export function setHash(hash) {
+    window.location.hash = hash;
+}

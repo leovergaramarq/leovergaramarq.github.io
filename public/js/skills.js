@@ -88,6 +88,8 @@ export default function () {
                     "afterbegin",
                     $pointer
                 );
+
+                pointerTimeout = null;
             }, TRANSITION_DURATION / 2);
         } else {
             $li.setAttribute("selected", "");
