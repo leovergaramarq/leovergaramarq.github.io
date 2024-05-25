@@ -1,5 +1,46 @@
 "use strict";
 
+export const education = [
+    {
+        degree: "Systems and Computer Engineering",
+        on: "Universidad del Norte",
+        period: ["Jan 2019", "Nov 2023"],
+        details: ["GPA: 4.1/5.0", "Distinguished student"],
+        progress: [10, 10],
+        img: "./assets/img/about/uninorte.png"
+    }
+];
+
+export const experience = [
+    {
+        title: "Online Tutor",
+        company: "LatinHire",
+        period: ["Dec 2022", "Current"],
+        location: "Remote",
+        description:
+            "Online tutor, providing remote teaching services in English to U.S. clients, with an emphasis on mathematics and computer science.",
+        img: "./assets/img/about/latinhire.png"
+    },
+    {
+        title: "IT Research and Development Assistant",
+        company: "Universidad del Norte",
+        period: ["Apr 2023", "Apr 2024"],
+        location: "Barranquilla, Colombia",
+        description:
+            "Software developer in data quality projects for data refinement and integration. Additionally, worked on migration of the organization’s software developments to GitHub.",
+        img: "./assets/img/about/uninorte.png"
+    },
+    {
+        title: "Full-Stack Developer",
+        company: "Eyeland - EPICS in IEEE",
+        period: ["Jan 2023", "Nov 2023"],
+        location: "Barranquilla, Colombia",
+        description:
+            "Full-Stack developer in inclusive English learning solution for visually impaired people. I participated in research, solution design, cloud storage, web and mobile development.",
+        img: "./assets/img/about/epics-in-ieee.png"
+    }
+];
+
 const SKILLS_LANG = "skills-lang";
 const SKILLS_WEB = "skills-web";
 const SKILLS_DB = "skills-db";

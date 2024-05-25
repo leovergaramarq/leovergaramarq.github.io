@@ -1,6 +1,11 @@
 "use strict";
 
-import { categories, skills } from "./contents/skills.contents.js";
+import {
+    categories,
+    skills,
+    education,
+    experience
+} from "./contents/about.contents.js";
 
 export default function () {
     const TRANSITION_DURATION = 300;
@@ -8,10 +13,14 @@ export default function () {
 
     const $cat = document.querySelector(".about-skills__cat");
     const $tech = document.querySelector(".about-skills__tech");
+    const $edu = document.querySelector(".about-edu");
+    const $exp = document.querySelector(".about-exp");
     const $pointer = $cat.querySelector("#cat-pointer");
 
     configCvDownload();
 
+    displayEducation();
+    displayExperience();
     displayCategories();
     displaySkills();
 
@@ -105,6 +114,108 @@ export default function () {
                 }
             }
         }
+    }
+
+    function displayEducation() {
+        const html = education
+            .map(
+                ({ degree, details, on, period, progress, img }) => `
+                    <li class="edu">
+                        <div class="edu-left">
+                            <div class="edu-degree">
+                                ${degree}
+                            </div>
+                            <div class="edu-period">
+                                ${period.join(" - ")}
+                            </div>
+                            ${
+                                details.length
+                                    ? `
+                                <ul class="edu-details">
+                                    ${details
+                                        .map(
+                                            (detail) => `
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <span>${detail}</span>
+                                    </li>
+                                            `
+                                        )
+                                        .join("")}
+                                </ul>
+                                    `
+                                    : ""
+                            }
+                        </div>
+                        <div class="edu-right">
+                            <div class="edu-on">
+                                <span>${on}</span>
+                                ${img ? `<img src="${img}" alt="${on}" />` : ""}
+                            </div>
+                            ${
+                                progress[1] > 0 && progress[0] < progress[1]
+                                    ? `
+                                <div class="edu-progress" title="Progress">
+                                    <span style="width: ${
+                                        100 * (progress[0] / progress[1])
+                                    }%;"></span>
+                                </div>
+                                    `
+                                    : ""
+                            }
+                        </div>
+                    </li>
+                `
+            )
+            .join("\n");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $edu.insertAdjacentElement("beforeend", $ul);
+    }
+
+    function displayExperience() {
+        const html = experience
+            .map(
+                ({ company, description, img, location, period, title }) => `
+                    <li class="exp">
+                        <div class="exp-left">
+                            <div class="exp-title">
+                                ${title}
+                            </div>
+                            <div class="exp-placetime">
+                                <div class="period">${period.join(" - ")}</div>
+                                <div class="exp-location">
+                                    <i class="fa-solid fa-map-marker-alt"></i>
+                                    <span>${location}</span>
+                                </div>
+                            </div>
+                            <div class="exp-description">
+                                ${description}
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <div class="exp-company">
+                                <span>${company}</span>
+                                ${
+                                    img
+                                        ? `
+                                    <img src="${img}" alt="${company}" />
+                                        `
+                                        : ""
+                                }
+                            </div>
+                        </div>
+                    </li>
+                `
+            )
+            .join("\n");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $exp.insertAdjacentElement("beforeend", $ul);
     }
 
     function displayCategories() {

@@ -348,50 +348,176 @@ section:not(.home) {
     margin-top: 20px;
 }
 
-.about-edu ul li {
+/* About Education */
+
+.about-edu ul .edu {
     margin-top: 26px;
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 32px;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
-.about-edu__title {
+.about-edu ul .edu:hover {
+    background-color: var(--whitish-2);
+}
+
+.about-edu ul .edu .edu-left {
+    max-width: 75%;
+}
+
+.about-edu ul .edu .edu-left .edu-degree {
     font-size: 1.2rem;
 }
 
-.about-edu__on {
+.about-edu ul .edu .edu-left .edu-period {
     color: var(--gray-3);
-    margin-top: 12px;
+    margin-top: 8px;
+    font-size: 1rem;
 }
 
-/* .about-edu__progress {
+.about-edu ul .edu .edu-left .edu-details {
+    margin-top: 8px;
+}
+
+.about-edu ul .edu .edu-left .edu-details li {
     display: flex;
-    align-items: center;
-    margin-top: 12px;
+    gap: 8px;
+    margin-left: 8px;
 }
 
-.about-edu__num-progress {
-    margin-right: 12px;
+.about-edu ul .edu .edu-left .edu-details li span {
+    font-size: 1rem;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 400;
 }
 
-.about-edu__bar-progress {
+.about-edu ul .edu .edu-left .edu-details li i {
+    color: var(--blue-primary);
+}
+
+.about-edu ul .edu .edu-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 12px;
+    height: fit-content;
+}
+
+.about-edu ul .edu .edu-right .edu-on {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    height: fit-content;
+}
+
+.about-edu ul .edu .edu-right .edu-on span {
+    font-size: 1.1rem;
+}
+
+.about-edu ul .edu .edu-right .edu-on img {
+    width: 48px;
+    height: 48px;
+}
+
+.about-edu ul .edu .edu-right .edu-progress {
     position: relative;
-    width: 100%;
+    width: 200px;
     height: 20px;
     background-color: var(--gray-1);
     border-radius: 16px;
 }
 
-.about-edu__bar-progress span {
+.about-edu ul .edu .edu-right .edu-progress span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 90%; */
     height: 100%;
     background-color: var(--blue-primary);
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+}
+
+/* About Experience */
+
+.about-exp ul .exp {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.about-exp ul .exp:hover {
+    background-color: var(--whitish-2);
+}
+
+.about-exp ul .exp .exp-left {
+    max-width: 75%;
+}
+
+.about-exp ul .exp .exp-left .exp-title {
+    font-size: 1.2rem;
+}
+
+.about-exp ul .exp .exp-left .exp-placetime {
+    display: flex;
+    gap: 24px;
+    color: var(--gray-3);
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+/* .about-exp ul .exp .exp-left .exp-placetime .exp-period {
 } */
+
+.about-exp ul .exp .exp-left .exp-placetime .exp-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-exp ul .exp .exp-left .exp-placetime .exp-location i {
+    color: var(--blue-primary);
+}
+
+.about-exp ul .exp .exp-left .exp-placetime .exp-location span {
+    font-size: 0.9rem;
+}
+
+.about-exp ul .exp .exp-left .exp-description {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 400;
+}
+
+.about-exp ul .exp .exp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 12px;
+    height: fit-content;
+}
+
+.about-exp ul .exp .exp-right .exp-company {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    height: fit-content;
+}
+
+.about-exp ul .exp .exp-right .exp-company span {
+    font-size: 1.1rem;
+}
+
+.about-exp ul .exp .exp-right .exp-company img {
+    width: 48px;
+    height: 48px;
+}
 
 /* About Skills */
 
@@ -758,6 +884,7 @@ section:not(.home) {
 .contact__content h3 {
     margin-top: 32px;
     text-align: center;
+    font-weight: 400;
 }
 
 .contact-sections {
@@ -784,12 +911,6 @@ section:not(.home) {
     width: 64px;
     height: 64px;
 }
-
-/* .contact-direct ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-} */
 
 .contact-direct ul li {
     display: flex;
@@ -859,6 +980,20 @@ footer .nav-menu ul li a i {
 }
 
 @media screen and /*(min-width: 451px) and */(max-width: 900px) {
+    aside {
+        min-width: 180px;
+        max-width: 35vw;
+        width: 40vw;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 0 0 20px 0;
+    }
+
     .home__content {
         position: initial;
         top: initial;
@@ -879,19 +1014,21 @@ footer .nav-menu ul li a i {
         margin: 40px 0 0 0;
         justify-content: space-around;
     }
-
-    aside {
-        min-width: 180px;
-        max-width: 35vw;
-        width: 40vw;
-    }
-
-    main {
-        margin-left: 0;
-    }
 }
 
 @media screen and (max-width: 650px) {
+    :root {
+        --footer-height: 64px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .text {
+        font-size: 1.3rem;
+    }
+
     section:not(.home) {
         padding: 40px 10px;
     }
@@ -908,6 +1045,14 @@ footer .nav-menu ul li a i {
 
     .about__content {
         padding: 20px 10px;
+    }
+
+    .about__content .cv-zone .cv-download-group button a {
+        font-size: 1rem;
+    }
+
+    .about__content .cv-zone .cv-download-group select {
+        font-size: 0.9rem;
     }
 
     .about-skills__cat {
@@ -947,11 +1092,25 @@ footer .nav-menu ul li a i {
     .contact__content {
         padding: 20px 10px;
     }
+
+    .contact__content ul li img {
+        width: 56px;
+        height: 56px;
+    }
+
+    footer .nav-menu .logo a img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .text {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
     }
 
     .home__content {
@@ -976,6 +1135,14 @@ footer .nav-menu ul li a i {
         height: 56vw;
     }
 
+    .about__content .cv-zone .cv-download-group button a {
+        font-size: 0.9rem;
+    }
+
+    .about__content .cv-zone .cv-download-group select {
+        font-size: 0.8rem;
+    }
+
     .about-skills__tech__list ul {
         display: block;
         column-gap: 4px;
@@ -986,8 +1153,17 @@ footer .nav-menu ul li a i {
         gap: 0;
     }
 
+    .portfolio__content .portfolio-research ul li .research-content {
+        font-size: 1rem;
+    }
+
     .contact__content {
         padding: 20px 10px;
+    }
+
+    .contact__content ul li img {
+        width: 48px;
+        height: 48px;
     }
 
     footer .nav-menu .logo {
