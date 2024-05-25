@@ -16,8 +16,10 @@ export default function () {
         contact: $aside.querySelector('ul li a[href="#contact"]')
     };
 
-    let swipeStartX, swipeStartY;
-    let swipeEndX, swipeEndY;
+    let swipeStartX;
+    let swipeStartY;
+    let swipeEndX;
+    let swipeEndY;
 
     const largeMQ = window.matchMedia("(min-width: 901px)");
     largeMQ.addEventListener("change", handleLargeMQ);
@@ -44,56 +46,59 @@ export default function () {
 
     document.body.addEventListener("touchend", (e) => {
         if (
-            hasAncestorOrEquals(e.target, $aside) ||
-            hasAncestorOrEquals(e.target, $footer)
-        )
-            return;
+            !hasAncestorOrEquals(e.target, $aside) &&
+            !hasAncestorOrEquals(e.target, $footer)
+        ) {
+            let swipeXMin;
+            let swipeYMax;
 
-        let swipeXMin;
-        let swipeYMax;
-
-        if (smallMQ.matches) {
-            swipeXMin = 60;
-            swipeYMax = 20;
-        } else if (mediumMQ.matches) {
-            swipeXMin = 80;
-            swipeYMax = 30;
-        } else {
-            swipeXMin = 100;
-            swipeYMax = 50;
-        }
-
-        if (
-            Math.abs(swipeStartY - swipeEndY) > swipeYMax ||
-            Math.abs(swipeStartX - swipeEndX) < swipeXMin
-        )
-            return;
-
-        const hash = getHash();
-
-        if (swipeStartX > swipeEndX) {
-            switch (hash) {
-                case "home":
-                    $navMenuOptions.about.click();
-                    break;
-                case "about":
-                    $navMenuOptions.portfolio.click();
-                    break;
-                case "portfolio":
-                    $navMenuOptions.contact.click();
+            if (smallMQ.matches) {
+                swipeXMin = 60;
+                swipeYMax = 20;
+            } else if (mediumMQ.matches) {
+                swipeXMin = 80;
+                swipeYMax = 30;
+            } else {
+                swipeXMin = 100;
+                swipeYMax = 50;
             }
-        } else if (swipeStartX < swipeEndX) {
-            switch (hash) {
-                case "about":
-                    $navMenuOptions.home.click();
-                    break;
-                case "portfolio":
-                    $navMenuOptions.about.click();
-                    break;
-                case "contact":
-                    $navMenuOptions.portfolio.click();
+
+            if (
+                Math.abs(swipeStartY - swipeEndY) <= swipeYMax &&
+                Math.abs(swipeStartX - swipeEndX) >= swipeXMin
+            ) {
+                const hash = getHash();
+
+                if (swipeStartX > swipeEndX) {
+                    switch (hash) {
+                        case "home":
+                            $navMenuOptions.about.click();
+                            break;
+                        case "about":
+                            $navMenuOptions.portfolio.click();
+                            break;
+                        case "portfolio":
+                            $navMenuOptions.contact.click();
+                    }
+                } else {
+                    switch (hash) {
+                        case "about":
+                            $navMenuOptions.home.click();
+                            break;
+                        case "portfolio":
+                            $navMenuOptions.about.click();
+                            break;
+                        case "contact":
+                            $navMenuOptions.portfolio.click();
+                    }
+                }
             }
         }
+
+        swipeStartX = null;
+        swipeStartY = null;
+        swipeEndX = null;
+        swipeEndY = null;
     });
 
     document.body.addEventListener("click", (e) => {

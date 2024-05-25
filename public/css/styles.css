@@ -412,7 +412,7 @@ section:not(.home) {
 }
 
 .about-edu ul .edu .edu-right .edu-on span {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .about-edu ul .edu .edu-right .edu-on img {
@@ -510,7 +510,7 @@ section:not(.home) {
 }
 
 .about-exp ul .exp .exp-right .exp-company span {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .about-exp ul .exp .exp-right .exp-company img {
@@ -655,7 +655,8 @@ section:not(.home) {
     border-radius: inherit;
 }
 
-.portfolio__content .portfolio-projects ul li a:hover {
+.portfolio__content .portfolio-projects ul li a:hover,
+.portfolio__content .portfolio-projects ul li a:active {
     scale: 1.1;
     box-shadow: 0 0 10px var(--gray-1);
     border: 1px solid var(--gray-1);
@@ -1132,6 +1133,14 @@ footer .nav-menu ul li a i {
         width: 48vw;
         min-width: 48vw;
         height: 48vw;
+    }
+
+    .about-edu ul .edu {
+        gap: 16px;
+    }
+
+    .about-exp ul .exp {
+        gap: 16px;
     }
 
     .about__content {

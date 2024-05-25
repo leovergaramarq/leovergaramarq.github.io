@@ -192,8 +192,7 @@ export const projects = [
     },
     {
         title: "Currencier",
-        description:
-            "Currency converter mobile application with real-time exchange rates.",
+        description: "Live currency converter using Exchange Rates API.",
         img: "./assets/img/portfolio/currencier.png",
         repoUrl: "https://github.com/leovergaramarq/currencier/",
         websiteUrl: "https://leovergaramarq.github.io/currencier/",
