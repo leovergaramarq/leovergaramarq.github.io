@@ -20,7 +20,7 @@
     --gray-3: rgb(94, 94, 94);
     --gray-4: rgb(37, 37, 37);
     --black: #030303;
-    --footer-height: 100px;
+    --footer-height: 64px;
 }
 
 body {
@@ -223,7 +223,6 @@ main {
 section {
     min-width: 100%;
     overflow: hidden auto;
-    /* padding: 40px 20px; */
 }
 
 section:not(.home) {
@@ -945,8 +944,8 @@ footer .nav-menu {
 }
 
 footer .nav-menu .logo a img {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
 }
 
 footer .nav-menu ul {
@@ -990,10 +989,6 @@ footer .nav-menu ul li a i {
         margin-left: 0;
     }
 
-    section {
-        padding: 0 0 20px 0;
-    }
-
     .home__content {
         position: initial;
         top: initial;
@@ -1003,7 +998,7 @@ footer .nav-menu ul li a i {
         flex-direction: column;
         text-align: center;
         min-width: 100%;
-        padding: 20px 40px;
+        padding: 20px 40px 60px 40px;
     }
 
     .home__pic {
@@ -1014,13 +1009,21 @@ footer .nav-menu ul li a i {
         margin: 40px 0 0 0;
         justify-content: space-around;
     }
+
+    .about__content {
+        padding: 20px 20px 60px 20px;
+    }
+
+    .portfolio__content {
+        padding: 20px 20px 60px 20px;
+    }
+
+    .contact__content {
+        padding: 20px 20px 60px 20px;
+    }
 }
 
 @media screen and (max-width: 650px) {
-    :root {
-        --footer-height: 64px;
-    }
-
     h3 {
         font-size: 1.3rem;
     }
@@ -1034,7 +1037,7 @@ footer .nav-menu ul li a i {
     }
 
     .home__content {
-        padding: 20px 20px;
+        padding: 20px 40px 60px 40px;
     }
 
     .home__pic {
@@ -1044,7 +1047,7 @@ footer .nav-menu ul li a i {
     }
 
     .about__content {
-        padding: 20px 10px;
+        padding: 20px 10px 60px 10px;
     }
 
     .about__content .cv-zone .cv-download-group button a {
@@ -1082,7 +1085,7 @@ footer .nav-menu ul li a i {
     }
 
     .portfolio__content {
-        padding: 20px 10px;
+        padding: 20px 10px 60px 10px;
     }
 
     .portfolio__content .portfolio-research {
@@ -1090,7 +1093,7 @@ footer .nav-menu ul li a i {
     }
 
     .contact__content {
-        padding: 20px 10px;
+        padding: 20px 10px 60px 10px;
     }
 
     .contact__content ul li img {
@@ -1114,11 +1117,7 @@ footer .nav-menu ul li a i {
     }
 
     .home__content {
-        padding: 20px 10px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        padding: 20px 40px 100px 40px;
     }
 
     .home .home__name {
@@ -1130,9 +1129,13 @@ footer .nav-menu ul li a i {
     }
 
     .home__pic {
-        width: 56vw;
-        min-width: 56vw;
-        height: 56vw;
+        width: 48vw;
+        min-width: 48vw;
+        height: 48vw;
+    }
+
+    .about__content {
+        padding: 10px 10px 60px 10px;
     }
 
     .about__content .cv-zone .cv-download-group button a {
@@ -1153,12 +1156,16 @@ footer .nav-menu ul li a i {
         gap: 0;
     }
 
+    .portfolio__content {
+        padding: 10px 10px 60px 10px;
+    }
+
     .portfolio__content .portfolio-research ul li .research-content {
         font-size: 1rem;
     }
 
     .contact__content {
-        padding: 20px 10px;
+        padding: 10px 10px 60px 10px;
     }
 
     .contact__content ul li img {

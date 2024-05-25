@@ -1,6 +1,6 @@
 "use strict";
 
-import { hasAncestor, getHash } from "./utils.js";
+import { hasAncestor as hasAncestorOrEquals, getHash } from "./utils.js";
 
 export default function () {
     const $main = document.querySelector("main");
@@ -43,44 +43,55 @@ export default function () {
     });
 
     document.body.addEventListener("touchend", (e) => {
-        if (mediumMQ.matches && Math.abs(swipeStartY - swipeEndY) < 20) {
-            const hash = getHash();
+        if (
+            hasAncestorOrEquals(e.target, $aside) ||
+            hasAncestorOrEquals(e.target, $footer)
+        )
+            return;
 
-            if (swipeStartX - swipeEndX > 40) {
-                if (!$aside.hasAttribute("hidden-left"))
-                    $aside.setAttribute("hidden-left", "");
-                else {
-                    switch (hash) {
-                        case "home":
-                            $navMenuOptions.about.click();
-                            break;
-                        case "about":
-                            $navMenuOptions.portfolio.click();
-                            break;
-                        case "portfolio":
-                            $navMenuOptions.contact.click();
-                    }
-                }
-            } else if (
-                swipeStartX - swipeEndX < -30 &&
-                e.target !== $aside &&
-                !hasAncestor(e.target, $aside)
-            ) {
-                if (swipeStartX < 30) {
-                    if ($aside.hasAttribute("hidden-left"))
-                        $aside.removeAttribute("hidden-left");
-                } else {
-                    switch (hash) {
-                        case "about":
-                            $navMenuOptions.home.click();
-                            break;
-                        case "portfolio":
-                            $navMenuOptions.about.click();
-                            break;
-                        case "contact":
-                            $navMenuOptions.portfolio.click();
-                    }
-                }
+        let swipeXMin;
+        let swipeYMax;
+
+        if (smallMQ.matches) {
+            swipeXMin = 60;
+            swipeYMax = 20;
+        } else if (mediumMQ.matches) {
+            swipeXMin = 80;
+            swipeYMax = 30;
+        } else {
+            swipeXMin = 100;
+            swipeYMax = 50;
+        }
+
+        if (
+            Math.abs(swipeStartY - swipeEndY) > swipeYMax ||
+            Math.abs(swipeStartX - swipeEndX) < swipeXMin
+        )
+            return;
+
+        const hash = getHash();
+
+        if (swipeStartX > swipeEndX) {
+            switch (hash) {
+                case "home":
+                    $navMenuOptions.about.click();
+                    break;
+                case "about":
+                    $navMenuOptions.portfolio.click();
+                    break;
+                case "portfolio":
+                    $navMenuOptions.contact.click();
+            }
+        } else if (swipeStartX < swipeEndX) {
+            switch (hash) {
+                case "about":
+                    $navMenuOptions.home.click();
+                    break;
+                case "portfolio":
+                    $navMenuOptions.about.click();
+                    break;
+                case "contact":
+                    $navMenuOptions.portfolio.click();
             }
         }
     });
@@ -90,7 +101,7 @@ export default function () {
             mediumMQ.matches &&
             !$aside.hasAttribute("hidden-left") &&
             e.target !== $aside &&
-            !hasAncestor(e.target, $aside)
+            !hasAncestorOrEquals(e.target, $aside)
         ) {
             $aside.setAttribute("hidden-left", "");
         }
@@ -100,6 +111,10 @@ export default function () {
 
     function handleMediumMQ(e) {
         if (e.matches) {
+            if ($homeHi.classList.contains("hr-right")) {
+                $homeHi.classList.remove("hr-right");
+            }
+
             if (picIsLast()) {
                 $homeHi.insertAdjacentElement("afterend", $homePic);
             }
@@ -122,18 +137,11 @@ export default function () {
                 $footer.setAttribute("hidden-bottom", "");
             }
 
-            if ($homeHi.classList.contains("hr-left")) {
-                $homeHi.classList.remove("hr-left");
-            }
-
             if (!picIsLast()) {
                 $homeContent.insertAdjacentElement("beforeend", $homePic);
             }
 
             $main.style.height = "100vh";
-        } else {
-            if (!$homeHi.classList.contains("hr-left"))
-                $homeHi.classList.add("hr-left");
         }
     }
 
