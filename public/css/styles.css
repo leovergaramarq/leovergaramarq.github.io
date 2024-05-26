@@ -11,6 +11,7 @@
 
 :root {
     --blue-primary: #5488f0;
+    --color-secondary: #0b3c49;
     --white: #fdfdfd;
     --whitish-1: #f2f4f6;
     --whitish-2: #eee;
@@ -18,7 +19,7 @@
     --gray-1: #ccc;
     --gray-2: rgb(155, 155, 155);
     --gray-3: rgb(94, 94, 94);
-    --gray-4: rgb(37, 37, 37);
+    --gray-4: rgb(45, 45, 45);
     --black: #030303;
     --footer-height: 64px;
 }
@@ -27,13 +28,19 @@ body {
     background-color: var(--whitish-1);
 }
 
+span,
+div,
+a,
+p {
+    color: var(--gray-4);
+}
+
 li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: var(--black);
 }
 
 h1 {
@@ -46,6 +53,12 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+h3 i {
+    margin-left: 8px;
+    color: var(--color-secondary);
 }
 
 h4 {
@@ -81,8 +94,8 @@ h4 {
     background-color: var(--blue-primary);
     color: var(--white);
     border: none;
-    padding: 8px 12px;
-    border-radius: 1.5rem;
+    padding: 10px 12px;
+    border-radius: 0.75rem;
     font-weight: 300;
     cursor: pointer;
 }
@@ -111,7 +124,7 @@ h4 {
     margin-left: 0.25em;
 }
 
-.slider-arrow {
+/* .slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -127,10 +140,10 @@ h4 {
 .slider-arrow-right {
     right: 0;
     transform: translateX(200%);
-}
+} */
 
 .section-title {
-    color: var(--blue-primary);
+    color: var(--color-secondary);
 }
 
 /* .nav-menu {
@@ -153,7 +166,8 @@ h4 {
     font-size: 1.2rem;
 }
 
-.nav-menu ul li[selected] a {
+.nav-menu ul li[selected] a,
+.nav-menu ul li[selected] a i {
     color: var(--blue-primary);
 }
 
@@ -245,12 +259,19 @@ section:not(.home) {
     gap: 80px;
 }
 
-.home .home__name {
+.home .home__name,
+.home .home__name span {
     font-size: 2.5rem;
+}
+
+.home .home__name span {
+    color: var(--blue-primary);
+    font-family: "Baloo 2", cursive;
 }
 
 .home .home__job {
     font-size: 1.5rem;
+    color: var(--gray-4);
 }
 
 .home__info p {
@@ -271,7 +292,7 @@ section:not(.home) {
 
 .home__links i {
     font-size: 32px;
-    color: var(--blue-primary);
+    color: var(--color-secondary);
 }
 
 .home__social {
@@ -334,7 +355,7 @@ section:not(.home) {
 
 .about__content .cv-zone .cv-download-group button a {
     color: var(--white);
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: inherit;
     font-weight: 300;
     font-size: 1.1rem;
@@ -344,7 +365,7 @@ section:not(.home) {
     background-color: var(--blue-primary);
     color: var(--white);
     border: none;
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: 0 1.5rem 1.5rem 0;
     font-weight: 300;
     font-size: 1rem;
@@ -369,7 +390,7 @@ section:not(.home) {
     justify-content: space-between;
     gap: 32px;
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 0.75rem;
 }
 
 .about-edu ul .edu:hover {
@@ -539,6 +560,7 @@ section:not(.home) {
     justify-content: center;
     margin-top: 16px;
     border: 1px solid var(--gray-1);
+    border-radius: 0.75rem;
 }
 
 .about-skills__cat {
@@ -551,6 +573,9 @@ section:not(.home) {
     top: 50%;
     /* left: 8px; */
     transform: translateY(-50%);
+}
+
+#cat-pointer i {
     color: var(--blue-primary);
 }
 
@@ -562,6 +587,14 @@ section:not(.home) {
 
 .about-skills__cat ul li div {
     position: relative;
+}
+
+.about-skills__cat ul li:first-child {
+    border-top-left-radius: 0.75rem;
+}
+
+.about-skills__cat ul li:last-child {
+    border-bottom-left-radius: 0.75rem;
 }
 
 .about-skills__cat ul li[selected] {
@@ -656,7 +689,7 @@ section:not(.home) {
 
 .portfolio__content .portfolio-projects ul li {
     height: 300px;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 
 .portfolio__content .portfolio-projects ul li a {
@@ -813,7 +846,7 @@ section:not(.home) {
     background-color: var(--blue-primary);
     color: var(--white);
     padding: 8px 12px;
-    border-radius: 1.5rem;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -895,14 +928,19 @@ section:not(.home) {
 
 /* CONTACT */
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .contact__content {
     padding: 20px 40px;
 }
 
 .contact__content h3 {
-    margin-top: 32px;
-    text-align: center;
     font-weight: 400;
+    margin-top: 32px;
 }
 
 .contact-sections {
@@ -930,22 +968,100 @@ section:not(.home) {
     height: 64px;
 }
 
-.contact-direct ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-direct__content {
+    margin-top: 24px;
+    border: 1px solid var(--gray-1);
+    border-radius: 0.75rem;
+    background-color: var(--whitish-2);
 }
 
-.contact-direct ul li img:hover {
-    transform: skew(0deg, -5deg);
-    transition: all 0.1s ease-in-out;
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px 32px 36px 32px;
+}
+
+.input-label {
+    display: flex;
+    gap: 4px;
+}
+
+/* .input-label-horizontal {
+    align-items: center;
+} */
+
+.input-label-vertical {
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-left: 4px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gray-3);
+}
+
+#contact-form label[for="contact-form-copy"] {
+    font-size: 0.9rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 8px 12px;
+    border: 1px solid var(--gray-1);
+    border-radius: 0.75rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--blue-primary);
+}
+
+#contact-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+#contact-form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.contact-form__area-submit {
+    display: flex;
+    align-items: end;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.contact-form__area-submit span a {
+    font-size: 0.9rem;
+    color: var(--gray-3);
+}
+
+.contact-form__area-submit span {
+    margin-bottom: 4px;
+}
+
+.contact-form__area-submit span a:hover {
+    text-decoration: underline var(--gray-3);
+}
+
+.contact-form__area-submit button {
+    font-size: 1.1rem;
+    padding: 8px 32px;
+    width: fit-content;
+    margin-left: 4px;
 }
 
 .contact-by {
     font-family: "Rubik", sans-serif;
-    margin-top: 96px;
+    margin-top: 128px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--gray-3);
 }
@@ -1066,7 +1182,8 @@ footer .nav-menu ul li a i {
         padding: 20px 40px 60px 40px;
     }
 
-    .home .home__name {
+    .home .home__name,
+    .home .home__name span {
         font-size: 2.2rem;
     }
 
@@ -1130,8 +1247,9 @@ footer .nav-menu ul li a i {
         font-size: 2rem;
     }
 
-    .home .home__job {
-        font-size: 1.4rem;
+    .home .home__name,
+    .home .home__name span {
+        font-size: 2rem;
     }
 
     .home__pic {
@@ -1173,6 +1291,11 @@ footer .nav-menu ul li a i {
     .contact__content ul li img {
         width: 48px;
         height: 48px;
+    }
+
+    .contact-form__area-submit {
+        flex-direction: column;
+        align-items: center;
     }
 
     footer .nav-menu .logo {

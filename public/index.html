@@ -81,7 +81,7 @@
                                 Hi!
                             </h2>
                             <h1 class="title italic home__name">
-                                I am Leonardo Vergara
+                                I am <span>Leonardo Vergara</span>
                             </h1>
                             <h3 class="title italic home__job">
                                 A Systems Engineer and Software Developer
@@ -178,15 +178,22 @@
                         </div>
 
                         <div class="about-edu">
-                            <h3 class="title-hr hr-right">Education</h3>
+                            <h3 class="title-hr hr-right">
+                                <span>Education</span
+                                ><i class="fa-solid fa-graduation-cap"></i>
+                            </h3>
                         </div>
                         <div class="about-exp">
                             <h3 class="title-hr hr-left hr-right">
-                                Experience
+                                <span>Experience</span
+                                ><i class="fa-solid fa-user-tie"></i>
                             </h3>
                         </div>
                         <div class="about-skills">
-                            <h3 class="title-hr hr-left">Tech Skills</h3>
+                            <h3 class="title-hr hr-left">
+                                <span>Tech Skills</span
+                                ><i class="fa-solid fa-tools"></i>
+                            </h3>
                             <div class="about-skills__content">
                                 <div class="about-skills__cat">
                                     <span id="cat-pointer" class="nodisplay"
@@ -203,7 +210,10 @@
                     <div class="portfolio__content">
                         <h1 class="section-title">Portfolio</h1>
                         <div class="portfolio-projects">
-                            <h3 class="title-hr hr-right">Projects</h3>
+                            <h3 class="title-hr hr-right">
+                                <span>Projects</span
+                                ><i class="fa-solid fa-briefcase"></i>
+                            </h3>
                             <div class="portfolio-projects__pagination">
                                 <span class="arrow arrow-left">
                                     <i class="fa-solid fa-arrow-left"></i>
@@ -226,7 +236,10 @@
                             </div>
                         </div>
                         <div class="portfolio-research">
-                            <h3 class="title-hr hr-left">Research</h3>
+                            <h3 class="title-hr hr-left">
+                                <span>Research</span
+                                ><i class="fa-solid fa-book"></i>
+                            </h3>
                         </div>
                     </div>
                 </section>
@@ -235,8 +248,89 @@
                     <div class="contact__content">
                         <h1 class="section-title">Contact</h1>
                         <div class="contact-sections">
+                            <div class="contact-direct">
+                                <h3>
+                                    <span>Send an email</span>
+                                    <i class="fa-solid fa-envelope"></i>
+                                </h3>
+                                <div class="contact-direct__content">
+                                    <form id="contact-form">
+                                        <div
+                                            class="input-label input-label-vertical"
+                                        >
+                                            <label for="contact-form-name"
+                                                >Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="contact-form-name"
+                                                name="name"
+                                                required
+                                            />
+                                        </div>
+
+                                        <div
+                                            class="input-label input-label-vertical"
+                                        >
+                                            <label for="contact-form-email"
+                                                >Email</label
+                                            >
+                                            <input
+                                                type="contact-form-email"
+                                                id="email"
+                                                name="email"
+                                                required
+                                            />
+                                        </div>
+
+                                        <div
+                                            class="input-label input-label-vertical"
+                                        >
+                                            <label for="messagecontact-form-"
+                                                >Message</label
+                                            >
+                                            <textarea
+                                                id="contact-form-message"
+                                                name="message"
+                                                required
+                                            ></textarea>
+                                        </div>
+
+                                        <div
+                                            class="input-label input-label-horizontal"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                id="contact-form-copy"
+                                                name="copy"
+                                            />
+                                            <label for="contact-form-copy"
+                                                >Send me a copy</label
+                                            >
+                                        </div>
+
+                                        <div class="contact-form__area-submit">
+                                            <button
+                                                type="submit"
+                                                class="btn-primary"
+                                            >
+                                                Send
+                                            </button>
+                                            <span
+                                                ><a
+                                                    href="mailto:leovergaramarq@gmail.com"
+                                                    >leovergaramarq@gmail.com</a
+                                                ></span
+                                            >
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="contact-main">
-                                <h3>Find me on</h3>
+                                <h3>
+                                    <span>... or find me on</span
+                                    ><i class="fa-solid fa-hashtag"></i>
+                                </h3>
                                 <ul>
                                     <li>
                                         <a
@@ -284,32 +378,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="contact-direct">
-                                <h3>... or contact me directly</h3>
-                                <ul>
-                                    <li>
-                                        <a
-                                            href="mailto:leovergaramarq@gmail.com"
-                                        >
-                                            <img
-                                                src="./assets/icons/email.svg"
-                                            />
-                                        </a>
-                                        <span>leovergaramarq@gmail.com</span>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                    </div>
-                    <div class="contact-by">
-                        Designed and developed by
-                        <span
-                            ><a
-                                href="https://github.com/leovergaramarq"
-                                target="_blank"
-                                >Leonardo Vergara</a
-                            ></span
-                        >
+                        <div class="contact-by">
+                            Designed and developed by
+                            <span
+                                ><a
+                                    href="https://github.com/leovergaramarq"
+                                    target="_blank"
+                                    >Leonardo Vergara</a
+                                ></span
+                            >
+                        </div>
                     </div>
                 </section>
             </div>
