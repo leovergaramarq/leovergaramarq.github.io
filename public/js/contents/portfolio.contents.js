@@ -187,7 +187,7 @@ export const projects = [
         websiteUrl: "https://leovergaramarq.github.io/",
         projectUrl: null,
         tags: ["HTML", "CSS", "Javascript"],
-        hide: false,
+        hide: true,
         authorship: "Author"
     },
     {

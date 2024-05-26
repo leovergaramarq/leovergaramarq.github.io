@@ -4,9 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: 'Rubik', sans-serif; */
+    /* font-family: "Signika Negative", sans-serif; */
     /* font-family: 'Baloo 2', cursive; */
-    font-family: "Signika Negative", sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 :root {
@@ -61,10 +61,8 @@ h4 {
 }
 
 .text {
-    font-family: "Signika Negative", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 300;
-    font-size: 1.2rem;
-    line-height: 1.5;
 }
 
 .anchor {
@@ -148,6 +146,7 @@ h4 {
     color: var(--gray-4);
     font-family: "Baloo 2", cursive;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .nav-menu ul a i {
@@ -246,8 +245,21 @@ section:not(.home) {
     gap: 80px;
 }
 
+.home .home__name {
+    font-size: 2.5rem;
+}
+
+.home .home__job {
+    font-size: 1.5rem;
+}
+
 .home__info p {
     margin-top: 20px;
+}
+
+.home__desc {
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 .home__links {
@@ -304,7 +316,7 @@ section:not(.home) {
 }
 
 .about__content .cv-zone {
-    margin-top: 32px;
+    margin-top: 24px;
 }
 
 .about__content .cv-zone .cv-download-group {
@@ -343,8 +355,10 @@ section:not(.home) {
     margin-left: 6px;
 }
 
-.about-me p {
+.about-me .about__desc {
     margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /* About Education */
@@ -387,9 +401,9 @@ section:not(.home) {
 }
 
 .about-edu ul .edu .edu-left .edu-details li span {
-    font-size: 1rem;
-    font-family: "Signika Negative", sans-serif;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
 }
 
 .about-edu ul .edu .edu-left .edu-details li i {
@@ -412,7 +426,7 @@ section:not(.home) {
 }
 
 .about-edu ul .edu .edu-right .edu-on span {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .about-edu ul .edu .edu-right .edu-on img {
@@ -489,9 +503,9 @@ section:not(.home) {
 
 .about-exp ul .exp .exp-left .exp-description {
     margin-top: 8px;
-    font-size: 1rem;
-    font-family: "Signika Negative", sans-serif;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
 }
 
 .about-exp ul .exp .exp-right {
@@ -510,7 +524,7 @@ section:not(.home) {
 }
 
 .about-exp ul .exp .exp-right .exp-company span {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .about-exp ul .exp .exp-right .exp-company img {
@@ -541,7 +555,7 @@ section:not(.home) {
 }
 
 .about-skills__cat ul li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: default;
     padding: 22px 12px;
 }
@@ -823,6 +837,10 @@ section:not(.home) {
     margin-top: 32px;
 }
 
+.portfolio__content .portfolio-research ul * {
+    font-family: "Signika Negative", sans-serif;
+}
+
 .portfolio__content .portfolio-research ul li {
     margin-top: 24px;
 }
@@ -830,7 +848,7 @@ section:not(.home) {
 .portfolio__content .portfolio-research ul li .research-content {
     position: relative;
     font-size: 1.1rem;
-    font-family: "Signika Negative", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 300;
 }
 
@@ -890,7 +908,7 @@ section:not(.home) {
 .contact-sections {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 64px;
     margin-top: 24px;
 }
 
@@ -921,6 +939,21 @@ section:not(.home) {
 .contact-direct ul li img:hover {
     transform: skew(0deg, -5deg);
     transition: all 0.1s ease-in-out;
+}
+
+.contact-by {
+    font-family: "Rubik", sans-serif;
+    margin-top: 96px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gray-3);
+}
+
+.contact-by span a {
+    font-family: "Rubik", sans-serif;
+    color: var(--blue-primary);
+    font-weight: 500;
 }
 
 /* FOOTER */
@@ -1025,20 +1058,16 @@ footer .nav-menu ul li a i {
 }
 
 @media screen and (max-width: 650px) {
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    .text {
-        font-size: 1.3rem;
-    }
-
     section:not(.home) {
         padding: 40px 10px;
     }
 
     .home__content {
         padding: 20px 40px 60px 40px;
+    }
+
+    .home .home__name {
+        font-size: 2.2rem;
     }
 
     .home__pic {
@@ -1051,24 +1080,12 @@ footer .nav-menu ul li a i {
         padding: 20px 10px 60px 10px;
     }
 
-    .about__content .cv-zone .cv-download-group button a {
-        font-size: 1rem;
-    }
-
-    .about__content .cv-zone .cv-download-group select {
-        font-size: 0.9rem;
-    }
-
     .about-skills__cat {
         width: min-content;
     }
 
     .about-skills__cat ul li {
         text-align: center;
-    }
-
-    .about-skills__cat ul li span {
-        font-size: 1rem;
     }
 
     .about-skills__tech__list ul {
@@ -1079,10 +1096,6 @@ footer .nav-menu ul li a i {
     .about-skills__tech__list ul li img {
         width: 38px;
         min-width: 38px;
-    }
-
-    .about-skills__tech__list ul li span {
-        font-size: 1rem;
     }
 
     .portfolio__content {
@@ -1109,24 +1122,16 @@ footer .nav-menu ul li a i {
 }
 
 @media screen and (max-width: 450px) {
-    .text {
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
     .home__content {
         padding: 20px 40px 100px 40px;
     }
 
     .home .home__name {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .home .home__job {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .home__pic {
@@ -1147,14 +1152,6 @@ footer .nav-menu ul li a i {
         padding: 10px 10px 60px 10px;
     }
 
-    .about__content .cv-zone .cv-download-group button a {
-        font-size: 0.9rem;
-    }
-
-    .about__content .cv-zone .cv-download-group select {
-        font-size: 0.8rem;
-    }
-
     .about-skills__tech__list ul {
         display: block;
         column-gap: 4px;
@@ -1167,10 +1164,6 @@ footer .nav-menu ul li a i {
 
     .portfolio__content {
         padding: 10px 10px 60px 10px;
-    }
-
-    .portfolio__content .portfolio-research ul li .research-content {
-        font-size: 1rem;
     }
 
     .contact__content {
@@ -1187,6 +1180,6 @@ footer .nav-menu ul li a i {
     }
 
     footer .nav-menu ul li a i {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
