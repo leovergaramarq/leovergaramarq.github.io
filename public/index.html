@@ -250,7 +250,7 @@
                         <div class="contact-sections">
                             <div class="contact-direct">
                                 <h3>
-                                    <span>Send an email</span>
+                                    <span>Send me an email</span>
                                     <i class="fa-solid fa-envelope"></i>
                                 </h3>
                                 <div class="contact-direct__content">
@@ -296,17 +296,19 @@
                                             ></textarea>
                                         </div>
 
+                                        <!-- Input for file uploads -->
                                         <div
-                                            class="input-label input-label-horizontal"
+                                            class="input-label input-label-vertical"
                                         >
-                                            <input
-                                                type="checkbox"
-                                                id="contact-form-copy"
-                                                name="copy"
-                                            />
-                                            <label for="contact-form-copy"
-                                                >Send me a copy</label
+                                            <label for="contact-form-file"
+                                                >Files (optional)</label
                                             >
+                                            <input
+                                                type="file"
+                                                id="contact-form-file"
+                                                name="file"
+                                                multiple
+                                            />
                                         </div>
 
                                         <div class="contact-form__area-submit">
@@ -422,6 +424,7 @@
             </nav>
         </footer>
 
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script type="module" src="./js/index.js"></script>
     </body>
 </html>

@@ -100,6 +100,16 @@ h4 {
     cursor: pointer;
 }
 
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+button.disabled {
+    cursor: not-allowed;
+    background-color: var(--gray-1);
+    color: var(--black);
+}
+
 /* https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-horizontal-rule */
 
 .hr-left,
@@ -1013,6 +1023,7 @@ section:not(.home) {
     border-radius: 0.75rem;
     font-family: "Rubik", sans-serif;
     font-weight: 300;
+    font-size: 1.1rem;
 }
 
 #contact-form input:focus,
