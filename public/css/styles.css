@@ -40,12 +40,13 @@ body[theme="light"] {
     --color-text-1: var(--gray-4);
     --color-text-2: var(--gray-3);
     --color-text-3: var(--gray-3);
+    --color-text-4: var(--gray-2);
     --color-util-1: var(--gray-1);
     --color-util-2: var(--black);
     --color-util-3: var(--gray-2);
     --color-util-4: var(--white);
     --color-util-5: var(--gray-1);
-    --color-util-5: var(--gray-1);
+    --color-util-6: var(--white);
     --color-primary: var(--blue-1);
     --color-secondary: var(--gray-5);
     --color-tertiary: var(--cyan-dark-1);
@@ -63,6 +64,7 @@ body[theme="dark"] {
     --color-text-1: var(--whitish-2);
     --color-text-2: var(--whitish-3);
     --color-text-3: var(--gray-1);
+    --color-text-4: var(--gray-2);
     --color-util-1: var(--gray-3);
     --color-util-2: var(--whitish-2);
     --color-util-3: var(--gray-3);
@@ -927,9 +929,9 @@ section:not(.home) {
     .project-content__info
     .project-content__title {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-primary);
-    text-shadow: 1px 1px 1px var(--color-bg-2);
+    text-shadow: 1px 1px 1px var(--whitish-3);
 }
 
 .portfolio__content
@@ -941,8 +943,9 @@ section:not(.home) {
     .project-content__info
     .project-content__authorship {
     font-size: 1.2rem;
-    text-shadow: 1px 1px 1px var(--color-text-1);
-    color: var(--color-bg-4);
+    font-weight: 600;
+    text-shadow: 1px 1px 1px var(--gray-4);
+    color: var(--color-text-4);
 }
 
 .portfolio__content
@@ -954,7 +957,7 @@ section:not(.home) {
     .project-content__info
     .project-content__description {
     font-size: 1rem;
-    color: var(--color-bg-2);
+    color: var(--white);
 }
 
 .portfolio__content .portfolio-projects__more a i {

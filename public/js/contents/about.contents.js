@@ -201,11 +201,6 @@ export const skills = {
     ],
     [SKILLS_DEVOPS]: [
         {
-            title: "Heroku",
-            level: "Good",
-            icon: "./assets/icons/heroku.svg"
-        },
-        {
             title: "Docker",
             level: "Good",
             icon: "./assets/icons/docker.svg"
@@ -218,7 +213,7 @@ export const skills = {
     ],
     [SKILLS_OTHER]: [
         {
-            title: "Matlab",
+            title: "MATLAB",
             level: "Medium",
             icon: "./assets/icons/matlab.svg"
         },

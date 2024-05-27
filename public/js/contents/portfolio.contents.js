@@ -248,7 +248,7 @@ export const projects = [
         authorship: "Author"
     },
     {
-        title: "Guardians of Globe",
+        title: "Guardians of Globe Backend",
         description:
             "Backend about Invincible's universe, including Web API with ASP.NET Core and DB with Oracle Database. This solution is containerized with Docker Compose.",
         img: "./assets/img/portfolio/guardians-of-globe.png",
