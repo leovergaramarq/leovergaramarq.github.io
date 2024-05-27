@@ -3,7 +3,6 @@
 import { hasAncestor as hasAncestorOrEquals, getHash } from "./utils.js";
 
 export default function () {
-    const $main = document.querySelector("main");
     const $aside = document.querySelector("aside");
     const $footer = document.querySelector("footer");
     const $homeHi = document.querySelector(".home__greet");
@@ -45,51 +44,53 @@ export default function () {
     });
 
     document.body.addEventListener("touchend", (e) => {
-        if (
-            !hasAncestorOrEquals(e.target, $aside) &&
-            !hasAncestorOrEquals(e.target, $footer)
-        ) {
-            let swipeXMin;
-            let swipeYMax;
-
-            if (smallMQ.matches) {
-                swipeXMin = 60;
-                swipeYMax = 20;
-            } else if (mediumMQ.matches) {
-                swipeXMin = 80;
-                swipeYMax = 30;
-            } else {
-                swipeXMin = 100;
-                swipeYMax = 50;
-            }
-
+        if (swipeStartX && swipeStartY && swipeEndX && swipeEndY) {
             if (
-                Math.abs(swipeStartY - swipeEndY) <= swipeYMax &&
-                Math.abs(swipeStartX - swipeEndX) >= swipeXMin
+                !hasAncestorOrEquals(e.target, $aside) &&
+                !hasAncestorOrEquals(e.target, $footer)
             ) {
-                const hash = getHash();
+                let swipeXMin;
+                let swipeYMax;
 
-                if (swipeStartX > swipeEndX) {
-                    switch (hash) {
-                        case "home":
-                            $navMenuOptions.about.click();
-                            break;
-                        case "about":
-                            $navMenuOptions.portfolio.click();
-                            break;
-                        case "portfolio":
-                            $navMenuOptions.contact.click();
-                    }
+                if (smallMQ.matches) {
+                    swipeXMin = 60;
+                    swipeYMax = 20;
+                } else if (mediumMQ.matches) {
+                    swipeXMin = 80;
+                    swipeYMax = 30;
                 } else {
-                    switch (hash) {
-                        case "about":
-                            $navMenuOptions.home.click();
-                            break;
-                        case "portfolio":
-                            $navMenuOptions.about.click();
-                            break;
-                        case "contact":
-                            $navMenuOptions.portfolio.click();
+                    swipeXMin = 100;
+                    swipeYMax = 50;
+                }
+
+                if (
+                    Math.abs(swipeStartY - swipeEndY) <= swipeYMax &&
+                    Math.abs(swipeStartX - swipeEndX) >= swipeXMin
+                ) {
+                    const hash = getHash();
+
+                    if (swipeStartX > swipeEndX) {
+                        switch (hash) {
+                            case "home":
+                                $navMenuOptions.about.click();
+                                break;
+                            case "about":
+                                $navMenuOptions.portfolio.click();
+                                break;
+                            case "portfolio":
+                                $navMenuOptions.contact.click();
+                        }
+                    } else {
+                        switch (hash) {
+                            case "about":
+                                $navMenuOptions.home.click();
+                                break;
+                            case "portfolio":
+                                $navMenuOptions.about.click();
+                                break;
+                            case "contact":
+                                $navMenuOptions.portfolio.click();
+                        }
                     }
                 }
             }
@@ -129,7 +130,6 @@ export default function () {
             if ($footer.hasAttribute("hidden-bottom")) {
                 $footer.removeAttribute("hidden-bottom");
             }
-            $main.style.height = "calc(100vh - var(--footer-height))";
         }
     }
 
@@ -145,8 +145,6 @@ export default function () {
             if (!picIsLast()) {
                 $homeContent.insertAdjacentElement("beforeend", $homePic);
             }
-
-            $main.style.height = "100vh";
         }
     }
 

@@ -36,14 +36,20 @@
         <title>Leonardo Vergara</title>
     </head>
 
-    <body>
+    <body theme="dark">
+        <span id="theme-picker">
+            <span class="theme-picker__icon">
+                <i class="fa-solid fa-moon" theme="light"></i>
+                <i class="fa-solid fa-sun" theme="dark"></i>
+            </span>
+        </span>
         <aside hidden-left>
             <nav class="nav-menu">
-                <span class="logo">
+                <!-- <span class="logo">
                     <a href=".">
                         <img src="./assets/icons/lv.svg" />
                     </a>
-                </span>
+                </span> -->
                 <ul>
                     <li>
                         <a href="#home"
@@ -81,10 +87,18 @@
                                 Hi!
                             </h2>
                             <h1 class="title italic home__name">
-                                I am <span>Leonardo Vergara</span>
+                                <span>I am</span>
+                                <span>Leonardo Vergara</span>
                             </h1>
                             <h3 class="title italic home__job">
-                                A Systems Engineer and Software Developer
+                                <span>A</span>
+                                <span class="color-primary"
+                                    >Systems Engineer</span
+                                >
+                                <span>and</span>
+                                <span class="color-primary"
+                                    >Software Developer</span
+                                >
                             </h3>
                             <p class="text home__desc">
                                 I'm a systems engineer and passionate about
@@ -227,7 +241,7 @@
                                 <a
                                     href="https://github.com/leovergaramarq?tab=repositories"
                                     target="_blank"
-                                    class="btn-primary"
+                                    class="btn-link"
                                 >
                                     More<i
                                         class="fa-solid fa-arrow-up-right-from-square"
@@ -319,7 +333,8 @@
                                                 Send
                                             </button>
                                             <span
-                                                ><a
+                                                ><span>to</span>
+                                                <a
                                                     href="mailto:leovergaramarq@gmail.com"
                                                     >leovergaramarq@gmail.com</a
                                                 ></span
@@ -405,11 +420,11 @@
                     <li>
                         <a href="#about"><i class="fa-solid fa-user"></i></a>
                     </li>
-                    <span class="logo">
+                    <!-- <span class="logo">
                         <a href=".">
                             <img src="./assets/icons/lv.svg" />
                         </a>
-                    </span>
+                    </span> -->
                     <li>
                         <a href="#portfolio"
                             ><i class="fa-solid fa-briefcase"></i
