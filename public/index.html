@@ -37,7 +37,7 @@
     </head>
 
     <body theme="dark">
-        <span id="theme-picker">
+        <span id="theme-picker" class="cursor-pointer">
             <span class="theme-picker__icon">
                 <i class="fa-solid fa-moon" theme="light"></i>
                 <i class="fa-solid fa-sun" theme="dark"></i>
@@ -229,11 +229,11 @@
                                 ><i class="fa-solid fa-briefcase"></i>
                             </h3>
                             <div class="portfolio-projects__pagination">
-                                <span class="arrow arrow-left">
+                                <span class="arrow arrow-left cursor-pointer">
                                     <i class="fa-solid fa-arrow-left"></i>
                                 </span>
                                 <span class="portfolio-projects__page"></span>
-                                <span class="arrow arrow-right">
+                                <span class="arrow arrow-right cursor-pointer">
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </span>
                             </div>
@@ -315,14 +315,27 @@
                                             class="input-label input-label-vertical"
                                         >
                                             <label for="contact-form-file"
-                                                >Files (optional)</label
-                                            >
+                                                ><span class="label"
+                                                    >Files (optional)</span
+                                                >
+                                                <div
+                                                    class="file-zone cursor-pointer"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-upload"
+                                                    ></i>
+                                                    <span class="file-zone__msg"
+                                                        >Upload</span
+                                                    >
+                                                </div>
+                                            </label>
                                             <input
                                                 type="file"
                                                 id="contact-form-file"
                                                 name="file"
                                                 multiple
                                             />
+                                            <div class="file-list"></div>
                                         </div>
 
                                         <div class="contact-form__area-submit">

@@ -1,5 +1,7 @@
 export default function () {
     const $form = document.querySelector("#contact-form");
+    const $fileZone = $form.querySelector(".file-zone");
+    const $fileList = $form.querySelector(".file-list");
     const $btnSubmit = $form.querySelector("button[type=submit]");
     const MB_SIZE_LIMIT = 25;
 
@@ -58,6 +60,7 @@ export default function () {
                 }
 
                 $form.reset();
+                $fileList.innerHTML = "";
 
                 alert(
                     `Thank you for your message, ${data.name}! I'll get back to you as soon as possible.`
@@ -75,6 +78,30 @@ export default function () {
         $btnSubmit.disabled = false;
         $btnSubmit.classList.remove("disabled");
         $btnSubmit.textContent = originalText;
+    });
+
+    $form.file.addEventListener("change", () => {
+        const $msg = $fileZone.querySelector(".file-zone__msg");
+        $fileList.innerHTML = "";
+
+        const files = Array.from($form.file.files);
+        const html = files
+            .map(
+                (file) =>
+                    `<li>${file.name} (${(file.size / 1024 / 1024).toFixed(
+                        1
+                    )}MB)</li>`
+            )
+            .join("");
+
+        const $ul = document.createElement("ul");
+        $ul.innerHTML = html;
+
+        $fileList.appendChild($ul);
+
+        $msg.textContent = files.length
+            ? "Click again to change/unattach files"
+            : "Upload";
     });
 
     function areFilesValid(files) {
