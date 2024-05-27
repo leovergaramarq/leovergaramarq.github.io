@@ -121,10 +121,35 @@ export default function () {
             .map(
                 ({ degree, details, on, period, progress, img }) => `
                     <li class="edu">
-                        <div class="edu-left">
-                            <div class="edu-degree">
-                                ${degree}
+                        <div class="edu-header">
+                            <div class="edu-left">
+                                <div class="edu-degree">
+                                    ${degree}
+                                </div>
                             </div>
+                            <div class="edu-right">
+                                <div class="edu-on">
+                                    <span>${on}</span>
+                                    ${
+                                        img
+                                            ? `<img src="${img}" alt="${on}" />`
+                                            : ""
+                                    }
+                                </div>
+                                ${
+                                    progress[1] > 0 && progress[0] < progress[1]
+                                        ? `
+                                    <div class="edu-progress" title="Progress">
+                                        <span style="width: ${
+                                            100 * (progress[0] / progress[1])
+                                        }%;"></span>
+                                    </div>
+                                        `
+                                        : ""
+                                }
+                            </div>
+                        </div>
+                        <div class="edu-body">
                             <div class="edu-period">
                                 ${period.join(" - ")}
                             </div>
@@ -147,23 +172,6 @@ export default function () {
                                     : ""
                             }
                         </div>
-                        <div class="edu-right">
-                            <div class="edu-on">
-                                <span>${on}</span>
-                                ${img ? `<img src="${img}" alt="${on}" />` : ""}
-                            </div>
-                            ${
-                                progress[1] > 0 && progress[0] < progress[1]
-                                    ? `
-                                <div class="edu-progress" title="Progress">
-                                    <span style="width: ${
-                                        100 * (progress[0] / progress[1])
-                                    }%;"></span>
-                                </div>
-                                    `
-                                    : ""
-                            }
-                        </div>
                     </li>
                 `
             )
@@ -180,10 +188,26 @@ export default function () {
             .map(
                 ({ company, description, img, location, period, title }) => `
                     <li class="exp">
-                        <div class="exp-left">
-                            <div class="exp-title">
-                                ${title}
+                        <div class="exp-header">
+                            <div class="exp-left">
+                                <div class="exp-title">
+                                    ${title}
+                                </div>
                             </div>
+                            <div class="exp-right">
+                                <div class="exp-company">
+                                    <span>${company}</span>
+                                    ${
+                                        img
+                                            ? `
+                                        <img src="${img}" alt="${company}" />
+                                            `
+                                            : ""
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exp-body">
                             <div class="exp-placetime">
                                 <div class="period">${period.join(" - ")}</div>
                                 <div class="exp-location">
@@ -193,18 +217,6 @@ export default function () {
                             </div>
                             <div class="exp-description">
                                 ${description}
-                            </div>
-                        </div>
-                        <div class="exp-right">
-                            <div class="exp-company">
-                                <span>${company}</span>
-                                ${
-                                    img
-                                        ? `
-                                    <img src="${img}" alt="${company}" />
-                                        `
-                                        : ""
-                                }
                             </div>
                         </div>
                     </li>

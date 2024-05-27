@@ -57,6 +57,8 @@ export default function () {
                     throw new Error(message);
                 }
 
+                $form.reset();
+
                 alert(
                     `Thank you for your message, ${data.name}! I'll get back to you as soon as possible.`
                 );
