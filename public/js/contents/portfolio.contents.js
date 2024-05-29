@@ -1,8 +1,5 @@
 "use strict";
 
-// TODO: include projects: MATLAB projects, etc.
-// TODO: include jobs.
-
 export const projects = [
     {
         title: "Eyeland",
@@ -171,8 +168,7 @@ export const projects = [
         description:
             "Mobile application for elementary school students to practice arithmetic.",
         img: "./assets/img/portfolio/sum-plus.png",
-        repoUrl:
-            "https://github.com/leovergaramarq/uninorte-mobile-class-project",
+        repoUrl: "https://github.com/leovergaramarq/sum-plus",
         websiteUrl: null,
         projectUrl: null,
         tags: ["Flutter"],

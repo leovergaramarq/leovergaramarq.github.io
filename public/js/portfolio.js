@@ -20,8 +20,6 @@ export default function () {
     setupArrows();
 
     function displayProjects() {
-        // TODO: use tags
-
         const $portfolioProjects = document.querySelector(
             "#portfolio .portfolio-projects"
         );
@@ -34,7 +32,7 @@ export default function () {
 
         const $h3 = $portfolioProjects.querySelector("h3");
 
-        const html = projectsAll
+        const html = projects
             .slice(
                 currentPage * projectsPerPage,
                 currentPage * projectsPerPage + projectsPerPage
