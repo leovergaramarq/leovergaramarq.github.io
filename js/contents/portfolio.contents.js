@@ -7,8 +7,8 @@ export const projects = [
             "Full-Stack developer in inclusive English learning solution for visually impaired people.",
         img: "./assets/img/portfolio/eyeland.png",
         repoUrl: null,
-        websiteUrl: "https://eyeland-project.github.io/webpage/",
-        projectUrl: "https://github.com/eyeland-project/",
+        websiteUrl: "https://eyeland-project.github.io/webpage",
+        projectUrl: "https://github.com/eyeland-project",
         tags: [
             "Full-Stack",
             "ReactJS",
@@ -38,17 +38,36 @@ export const projects = [
         img: "./assets/img/portfolio/epics-ieee.png",
         repoUrl: null,
         websiteUrl: null,
-        projectUrl: "https://github.com/Proyecto-Final-EPICS/",
+        projectUrl: "https://github.com/Proyecto-Final-EPICS",
         tags: ["Full-Stack", "MongoDB", "Flask", "ReactJS", "SASS"],
         hide: false,
         authorship: "Volunteering"
+    },
+    {
+        title: "Covid-19 Recovery Time Predictive Model",
+        description:
+            "Machine leaning predictive model for Covid-19 recovery time.",
+        img: "./assets/img/portfolio/covid-19-ml.png",
+        repoUrl:
+            "https://github.com/leovergaramarq/covid-19-recovery-time-model",
+        websiteUrl: null,
+        projectUrl: null,
+        tags: [
+            "Machine learning",
+            "Linear-regression",
+            "Sklearn",
+            "Prediction-model",
+            "Python"
+        ],
+        hide: false,
+        authorship: "Author"
     },
     {
         title: "Tutor Manager",
         description:
             "Tutor.com auto scheduler and facilitator of billing information.",
         img: "./assets/img/portfolio/tutor-manager.png",
-        repoUrl: "https://github.com/leovergaramarq/tutor-manager/",
+        repoUrl: "https://github.com/leovergaramarq/tutor-manager",
         websiteUrl: null,
         projectUrl: null,
         tags: ["Node.js", "SQLite", "Handlebars"],
@@ -59,7 +78,7 @@ export const projects = [
         title: "C19-Trace",
         description: "Web platform for visualization of epidemiological data.",
         img: "./assets/img/portfolio/c19-trace.png",
-        repoUrl: "https://github.com/leovergaramarq/C19-Trace/",
+        repoUrl: "https://github.com/leovergaramarq/C19-Trace",
         websiteUrl: null,
         projectUrl: null,
         tags: ["Node.js", "MongoDB", "Bootstrap", "D3.js"],
@@ -84,9 +103,9 @@ export const projects = [
             "Enhancing collaboration of Caribbean industrial companies for chemical risk mitigation.",
         img: "./assets/img/portfolio/simet.png",
         repoUrl: null,
-        websiteUrl: "https://simet.co/",
+        websiteUrl: "https://simet.co",
         projectUrl:
-            "https://www.uninorte.edu.co/web/grupo-prensa/w/simet-la-plataforma-que-mejorara-la-respuesta-ante-emergencias-tecnologicas-en-barranquilla/",
+            "https://www.uninorte.edu.co/web/grupo-prensa/w/simet-la-plataforma-que-mejorara-la-respuesta-ante-emergencias-tecnologicas-en-barranquilla",
         tags: ["AngularJS", "NestJS", "PostgreSQL"],
         hide: false,
         authorship: "Contributor"
@@ -108,10 +127,22 @@ export const projects = [
         description:
             "2D platform game that seeks to promote the participation of women in science and related careers.",
         img: "./assets/img/portfolio/women-of-science.png",
-        repoUrl: "https://github.com/leovergaramarq/WomenOfScience/",
+        repoUrl: "https://github.com/leovergaramarq/WomenOfScience",
         websiteUrl: null,
         projectUrl: null,
         tags: ["Java"],
+        hide: false,
+        authorship: "Co-author"
+    },
+    {
+        title: "2x2 Rubik's Cube Solver",
+        description:
+            "2x2 Rubik's Cube solver using A* Search algorithm and heuristics.",
+        img: "./assets/img/portfolio/2x2-rubik-cube.png",
+        repoUrl: "https://github.com/leovergaramarq/2x2-rubik-cube-solver",
+        websiteUrl: null,
+        projectUrl: null,
+        tags: ["Python", "Heuristics", "Algorithms"],
         hide: false,
         authorship: "Co-author"
     },
@@ -120,7 +151,7 @@ export const projects = [
         description:
             "Graphing calculator with a Java-based Graphical User Interface (GUI) that converts infix math expressions to postfix notation for computation.",
         img: "./assets/img/portfolio/calcu-graph.png",
-        repoUrl: "https://github.com/leovergaramarq/calcu-graph/",
+        repoUrl: "https://github.com/leovergaramarq/calcu-graph",
         websiteUrl: null,
         projectUrl: null,
         tags: ["Java"],
@@ -136,6 +167,19 @@ export const projects = [
         websiteUrl: null,
         projectUrl: null,
         tags: ["Java"],
+        hide: false,
+        authorship: "Co-author"
+    },
+    {
+        title: "Tutor-this",
+        description:
+            "Chrome extension. Quick assistant for Tutor.com workers who want to check their performance.",
+        img: "./assets/img/portfolio/tutor-this.png",
+        repoUrl: "https://github.com/leovergaramarq/tutor-this",
+        websiteUrl:
+            "https://chromewebstore.google.com/detail/tutor-this/ccheamnkjdplhdlemhjoekacgkclbenk?hl=es",
+        projectUrl: null,
+        tags: ["Chrome extension", "HTML", "JavaScript", "CSS"],
         hide: false,
         authorship: "Co-author"
     },
@@ -164,6 +208,18 @@ export const projects = [
         authorship: "Co-author"
     },
     {
+        title: "Nacho Music",
+        description:
+            "Music utilities, including Disord Music Bot that plays YouTube Playlists.",
+        img: "./assets/img/portfolio/nacho-music.png",
+        repoUrl: "https://github.com/leovergaramarq/leolizc-self-music-bot",
+        websiteUrl: null,
+        projectUrl: null,
+        tags: ["Discord", "TypeScript", "Linux", "Virtual Machine"],
+        hide: false,
+        authorship: "Colaborator"
+    },
+    {
         title: "Sum+",
         description:
             "Mobile application for elementary school students to practice arithmetic.",
@@ -180,7 +236,7 @@ export const projects = [
         description: "This project, my portfolio, is a showcase of my work.",
         img: "./assets/img/portfolio/this.png",
         repoUrl: "https://github.com/leovergaramarq/leovergaramarq.github.io",
-        websiteUrl: "https://leovergaramarq.github.io/",
+        websiteUrl: "https://leovergaramarq.github.io",
         projectUrl: null,
         tags: ["HTML", "CSS", "Javascript"],
         hide: true,
@@ -190,8 +246,8 @@ export const projects = [
         title: "Currencier",
         description: "Live currency converter using Exchange Rates API.",
         img: "./assets/img/portfolio/currencier.png",
-        repoUrl: "https://github.com/leovergaramarq/currencier/",
-        websiteUrl: "https://leovergaramarq.github.io/currencier/",
+        repoUrl: "https://github.com/leovergaramarq/currencier",
+        websiteUrl: "https://leovergaramarq.github.io/currencier",
         projectUrl: null,
         tags: ["TailwindJS", "HTML", "CSS", "Javascript"],
         hide: false,
@@ -261,7 +317,7 @@ export const projects = [
             "Multiple choice questions answering program to practice for exam.",
         img: "./assets/img/portfolio/domande-aperte.png",
         repoUrl: "https://github.com/leovergaramarq/domande-aperte",
-        websiteUrl: "https://leovergaramarq.github.io/domande-aperte/",
+        websiteUrl: "https://leovergaramarq.github.io/domande-aperte",
         projectUrl: null,
         tags: ["HTML", "CSS", "Javascript"],
         hide: false,
@@ -272,7 +328,7 @@ export const projects = [
         description: "15 Puzzle game in web.",
         img: "./assets/img/portfolio/fifteen-puzzle.png",
         repoUrl: "https://github.com/leovergaramarq/fifteen-puzzle",
-        websiteUrl: "https://leovergaramarq.github.io/fifteen-puzzle/",
+        websiteUrl: "https://leovergaramarq.github.io/fifteen-puzzle",
         projectUrl: null,
         tags: ["HTML", "CSS", "Javascript"],
         hide: false,
@@ -282,17 +338,39 @@ export const projects = [
 
 export const research = [
     {
+        title: "Eyeland: a visually-impaired accessible English learning application using a Design Based Research framework",
+        url: "https://ieeexplore.ieee.org/document/10637399",
+        authors: [
+            "Villalba, K.",
+            "Jimeno, M.",
+            "Robles, H.",
+            "Vergara, L.",
+            "Sinning, C.",
+            "Lizcano, L.",
+            "Hurtado, B.",
+            "Nieto, W."
+        ],
+        date: "August 2024",
+        lang: "English",
+        hide: false
+    },
+    {
         title: "Accessible software for the visually impaired to support English as a second language learning",
         url: "https://www.researchgate.net/publication/376229910_Software_accesible_para_personas_con_discapacidad_visual_que_apoya_el_aprendizaje_del_ingles_como_segunda_lengua",
         authors: ["Sinning C.J.", "Vergara, L.D.", "Lizcano, L.D."],
         date: "May 2023",
         lang: "Spanish",
-        hide: false
+        hide: true
     },
     {
         title: "Implementation of Machine Learning Model for Recovery Time Estimation of Covid-19",
         url: "https://www.researchgate.net/publication/380818622_Implementacion_de_Modelo_de_Machine_Learning_para_Estimacion_de_Tiempo_de_Recuperacion_de_Covid-19",
-        authors: ["Vergara, L.D."],
+        authors: [
+            "Vergara, L.D.",
+            "Cuesta, I.A.",
+            "Caicedo, H.E.",
+            "García, S.D."
+        ],
         date: "May 2022",
         lang: "Spanish",
         hide: false
