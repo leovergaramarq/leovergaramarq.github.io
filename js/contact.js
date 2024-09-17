@@ -41,7 +41,7 @@ export default function () {
 
             try {
                 const message = await Email.send({
-                    SecureToken: "9deebc6a-363f-4fda-a3f3-727b4237b30a",
+                    SecureToken: "bb16af86-e519-4874-acd5-3439c3c6522e",
                     To: "leonardo11vergara11@gmail.com",
                     From: "leonardo11vergara11@gmail.com",
                     Subject: "Your Website Contact Form",
