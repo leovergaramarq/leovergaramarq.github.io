@@ -181,7 +181,7 @@ export const projects = [
         projectUrl: null,
         tags: ["Chrome extension", "HTML", "JavaScript", "CSS"],
         hide: false,
-        authorship: "Co-author"
+        authorship: "Author"
     },
     {
         title: "Bungee Jumping Simulator",
@@ -217,7 +217,7 @@ export const projects = [
         projectUrl: null,
         tags: ["Discord", "TypeScript", "Linux", "Virtual Machine"],
         hide: false,
-        authorship: "Colaborator"
+        authorship: "Collaborator"
     },
     {
         title: "Sum+",
