@@ -1,7 +1,7 @@
 /* GENERAL */
 
 :root {
-    --blue-1: #5488f0;
+    --blue-1: #6686c7;
     --blue-2: #5ba1df;
     --blue-3: #e5eaee;
     --green-light-1: #37b768;
@@ -47,10 +47,10 @@ body[theme="light"] {
     --color-util-4: var(--white);
     --color-util-5: var(--gray-1);
     --color-util-6: var(--white);
-    --color-primary: var(--blue-1);
+    --color-primary: var(--cyan-dark-1);
     --color-secondary: var(--gray-5);
     --color-tertiary: var(--cyan-dark-1);
-    --color-quaternary: var(--blue-2);
+    --color-quaternary: var(--blue-1);
     --color-quinary: var(--blue-1);
 }
 
@@ -71,7 +71,7 @@ body[theme="dark"] {
     --color-util-4: var(--gray-3);
     --color-util-5: var(--gray-3);
     --color-util-6: var(--gray-4);
-    --color-primary: var(--blue-2);
+    --color-primary: var(--blue-1);
     --color-secondary: var(--green-light-1);
     --color-tertiary: var(--white);
     --color-quaternary: var(--green-light-1);
