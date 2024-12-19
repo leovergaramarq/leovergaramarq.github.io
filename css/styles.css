@@ -432,8 +432,8 @@ section:not(.home) {
     height: 300px;
     background-image: linear-gradient(
         to right,
-        #ffffff00 25%,
-        var(--color-primary)
+        #ffffff00 33%,
+        var(--color-tertiary)
     );
     border-radius: 50%;
     margin: 0;
